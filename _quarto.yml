@@ -5,7 +5,7 @@ project:
     - index.qmd
 
 website:
-  title: "Test"
+  title: ""
   navbar:
     left:
       - href: index.qmd
