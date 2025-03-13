@@ -2,3 +2,7 @@
 title: Yiquan Gu
 ---
 
+- Research
+- Projects
+- Teaching
+- Contact
