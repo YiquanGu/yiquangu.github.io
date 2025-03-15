@@ -1,5 +1,5 @@
 ---
-title: Yiquan Gu
+title: title
 ---
 
 - Research
