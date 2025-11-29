@@ -5,19 +5,14 @@ project:
     - index.qmd
 
 website:
-  title: ""
   google-analytics: G-CRVC0BS9GY
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+  # navbar:
+  #   left:
+  #     - href: index.qmd
 
 format:
   html:
-    theme: 
-      light: cosmo
-      dark: solar
+    theme: quartz
     css: styles.css
     toc: true
 
