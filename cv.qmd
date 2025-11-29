@@ -2,15 +2,17 @@
 title: CV and Contact
 ---
 
-- Professional experience
-    - 2022 - : Professor of Spatial Economics and Industrial Organization, Henley Business School, University of Reading
-    - 2011 - 2022: Lecturer (2011-15), Senior Lecturer (2015-19) and Reader (2019-2022) in Economics, University of Liverpool Management School
-        - 2020 - 2022: Institutional Lead for North West Social Science Doctoral Training Partnership
 
-- Education
-    - PhD in Economics, Dortmund
-    - Master of Finance, Freiburg
-    - BSc Management, Tongji
+## Professional experience
 
-- Contact
-    - yiquan.gu 'at' gmail.com
+- 2022 - : [Professor of Spatial Economics and Industrial Organization](https://www.henley.ac.uk/people/professor-yiquan-gu), [Henley Business School](https://www.henley.ac.uk/), [University of Reading](http://www.reading.ac.uk/)
+- 2011 - 2022: Lecturer (2011-15), Senior Lecturer (2015-19) and Reader (2019-2022) in Economics, [University of Liverpool](https://www.liverpool.ac.uk/) [Management School](https://www.liverpool.ac.uk/management/)
+    - 2020 - 2022: Institutional Lead for the [North West Social Science Doctoral Training Partnership](https://nwssdtp.ac.uk/)
+
+## Education
+- PhD in Economics, [TU Dortmund University](https://www.tu-dortmund.de/)
+- Master of Finance, [University of Freiburg](https://uni-freiburg.de/)
+- BSc Management, [Tongji University](https://www.tongji.edu.cn/)
+
+## Contact
+- yiquan.gu 'at' gmail.com

@@ -2,21 +2,27 @@ project:
   type: website
   output-dir: docs
   render:
-    - index.qmd
+    - "*.qmd"
 
 website:
   google-analytics: G-CRVC0BS9GY
-  # navbar:
-  #   left:
-  #     - href: cv.qmd
+  navbar:
+    background: primary
+    search: false
+    left:
+      - text: "Home"
+        href: index.qmd
+      - publications.qmd
+      - projects.qmd
+      - cv.qmd
 
 format:
   html:
     theme: 
-      light: lumen
+      light: journal
       dark: solar
     css: styles.css
-    toc: true
+    toc: false
 
 
 
