@@ -20,23 +20,15 @@ title: "Yiquan Gu"
 
 # Publications
 
+## Industrial Organization
+
 - [Consumer Salience and Quality Provision in (Un)Regulated Public Service Markets](https://doi.org/10.1016/j.regsciurbeco.2021.103754) (with Alexander Rasch and Tobias Wenzel), [Ungated Working Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3770534#), Regional Science and Urban Economics, March 2022
 
-- [Bid outcome processing in Vickrey auctions: An ERP study](https://doi.org/10.1111/psyp.14125) (with Alice Newton-Fenner et. al.), Psychophysiology, June 2022
 
 - [Data brokers co-opetition](https://doi.org/10.1093/oep/gpab042) (with Leo Madio and Carlo Reggiani), [Online Supplementary Material](https://drive.google.com/file/d/1zP3XYgIxemHS0oiaYfEk8W3yVi4B7Eom/view?usp=sharing), Oxford Economic Papers, July 2022
 
-- [Fair shares? Advancing land economics through cooperative game theory](https://dx.doi.org/10.1016/j.landusepol.2021.105400) (with Alexander Lord et. al.), Land Use Policy, July 2021
-
-<!-- with A. Lord, A. Eika, P. Dethier, D.A. Samsura, B. I.Nordahl, D.E. Sommervoll,E. van der Krabben, J-M Halleux -->
 
 - [Curbing Obfuscation: Empower Consumers or Regulate Firms?](https://doi.org/10.1016/j.ijindorg.2020.102582) (with Tobias Wenzel), [Ungated Working Paper](https://drive.google.com/file/d/1sSYZEdMAJ6OCJsx5lFwJS7nhJ7f0-Jc2/view?usp=sharing), [Online Supplementary Material](https://drive.google.com/uc?export=download&id=1xjHHXdC60NJEAtLpkfV5q_2CMMymx18_), International Journal of Industrial Organization, May 2020
-
-- [Virtuous or vicious circles? Exploring the behavioural connections between developer contributions and path dependence: Evidence from England](https://doi.org/10.1016/j.geoforum.2019.07.024) (with Alexander Lord, Gemma Burgess and Richard Dunning), Geoforum, November 2019
-
-- [Evolutionary Equilibrium in Contests with Stochastic Participation: Entry, Effort and Overdissipation](https://doi.org/10.1016/j.jebo.2019.06.011) (with Burkhard Hehenkamp and Wolfgang Leininger), [Ungated Working Paper](https://www.liverpool.ac.uk/media/livacuk/schoolofmanagement/research/economics/evolutionary-equilibrium-in-contests.pdf), Journal of Economic Behavior and Organization, August 2019
-
-- [Can the market be tamed? A thought experiment on the value(s) of planning](https://dx.doi.org/10.1177/0308518X18784600) (with Alexander Lord), Environment and Planning A: Economy and Space, February 2019
 
 - [Consumer confusion, obfuscation, and price regulation](https://dx.doi.org/10.1111/sjpe.12121) (with Tobias Wenzel), [Ungated Working Paper](https://drive.google.com/file/d/1qnh7Oy3t_0jYmWWdwLFee3uyDDTe7C5a/view?usp=sharing), Scottish Journal of Political Economy, May 2017
 
@@ -60,6 +52,33 @@ title: "Yiquan Gu"
 
 - [A Note on the Excess Entry Theorem in Spatial Models with Elastic Demand](http://dx.doi.org/10.1016/j.ijindorg.2009.01.002) (with Tobias Wenzel), [Ungated Working Paper](https://drive.google.com/file/d/132PeIyjAO5MnoM56_TRj3QDcQTc-_L4F/view?usp=sharing), International Journal of Industrial Organization, September 2009
 
+
+## Housing and Land Economics 
+
+- [Park Life: the difference between having financial information and understanding it on park home owners’ quality of life](https://centaur.reading.ac.uk/124436/) (with Alexander Lord, Richard Dunning, Ian Wilson and Tom Moore), Town Planning Review, Forthcoming
+
+- [Fair shares? Advancing land economics through cooperative game theory](https://dx.doi.org/10.1016/j.landusepol.2021.105400) (with Alexander Lord et. al.), Land Use Policy, July 2021
+
+<!-- with A. Lord, A. Eika, P. Dethier, D.A. Samsura, B. I.Nordahl, D.E. Sommervoll,E. van der Krabben, J-M Halleux -->
+
+- [Virtuous or vicious circles? Exploring the behavioural connections between developer contributions and path dependence: Evidence from England](https://doi.org/10.1016/j.geoforum.2019.07.024) (with Alexander Lord, Gemma Burgess and Richard Dunning), Geoforum, November 2019
+
+
+
+- [Can the market be tamed? A thought experiment on the value(s) of planning](https://dx.doi.org/10.1177/0308518X18784600) (with Alexander Lord), Environment and Planning A: Economy and Space, February 2019
+
+
+## Behavioral Foundations
+
+- [Evolutionary Equilibrium in Contests with Stochastic Participation: Entry, Effort and Overdissipation](https://doi.org/10.1016/j.jebo.2019.06.011) (with Burkhard Hehenkamp and Wolfgang Leininger), [Ungated Working Paper](https://www.liverpool.ac.uk/media/livacuk/schoolofmanagement/research/economics/evolutionary-equilibrium-in-contests.pdf), Journal of Economic Behavior and Organization, August 2019
+
+- [Bid outcome processing in Vickrey auctions: An ERP study](https://doi.org/10.1111/psyp.14125) (with Alice Newton-Fenner et. al.), Psychophysiology, June 2022
+
+- [A comparison of reward processing during Becker–DeGroot–Marschak and Vickrey auctions: an ERP study](https://doi.org/10.1111/psyp.14313) (with Alice Newton-Fenner et. al.), Psychophysiology, April 2023
+
+- [Economic value in the brain: a meta-analysis of willingness-to-pay using the Becker-DeGroot-Marschak auction](https://doi.org/10.1371/journal.pone.0286969), (with Alice Newton-Fenner et. al.), PLoS ONE, July 2023
+
+
 # Funding
 
 - [AI Regulation and Auditing](https://www.thebritishacademy.ac.uk/funding/innovation-fellowships-2024-25-route-b-policy-led-sustainable-futures/innovation-fellowships-route-b-policy-led-past-awards/innovation-fellowships-route-b-policy-led-digital-society-2025-awards/) (British Academy Grant)
@@ -74,22 +93,7 @@ title: "Yiquan Gu"
 
 - [Mobile homes: The impact of a change in the maximum park home sale commission](https://www.gov.uk/government/publications/mobile-homes-the-impact-of-a-change-in-the-maximum-park-home-sale-commission)
 
-- [Understanding the True Cost of Evictions in Scotland](https://scotland.shelter.org.uk/professional_resources/policy_library/understanding_the_true_cost_of_evictions_in_scotland), [STV News](https://news.stv.tv/scotland/evictions-from-social-housing-cost-councils-nearly-28m?top), [Scottish Housing News](https://www.scottishhousingnews.com/article/study-reveals-annual-28m-cost-of-evicting-tenants-from-social-housing)
+- [Understanding the True Cost of Evictions in Scotland](https://scotland.shelter.org.uk/professional_resources/policy_library/understanding_the_true_cost_of_evictions_in_scotland), (media: [STV News](https://news.stv.tv/scotland/evictions-from-social-housing-cost-councils-nearly-28m?top), [Scottish Housing News](https://www.scottishhousingnews.com/article/study-reveals-annual-28m-cost-of-evicting-tenants-from-social-housing))
 
 - [Behavioural insights research transforms community infrastructure investment through policy changes to developer contributions](https://www.liverpool.ac.uk/management/research/impact/behavioural-insights-research/) (Impact Case)
 
-
-# CV and Contact
-
-- Professional experience
-    - 2022 - : Professor of Spatial Economics and Industrial Organization, Henley Business School, University of Reading
-    - 2011 - 2022: Lecturer (2011-15), Senior Lecturer (2015-19) and Reader (2019-2022) in Economics, University of Liverpool Management School
-        - 2020 - 2022: Institutional Lead for North West Social Science Doctoral Training Partnership
-
-- Education
-    - PhD in Economics, Dortmund
-    - Master of Finance, Freiburg
-    - BSc Management, Tongji
-
-- Contact
-    - yiquan.gu 'at' gmail.com

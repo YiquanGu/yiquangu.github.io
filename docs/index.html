@@ -36,10 +36,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1e2d4cd4c0c187b7887ec59d340d0036.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-250a0ad726c327aed60c1b8aba93cc6c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-5100b8561cd7f6cd8c35657ed6fe7ee7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-250a0ad726c327aed60c1b8aba93cc6c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -81,7 +85,169 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="quarto-light">
+<body class="quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
 <!-- content -->
@@ -95,15 +261,20 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
   <ul>
   <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
   <li><a href="#working-papers" id="toc-working-papers" class="nav-link" data-scroll-target="#working-papers">Working Papers</a></li>
-  <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a></li>
+  <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a>
+  <ul class="collapse">
+  <li><a href="#industrial-organization" id="toc-industrial-organization" class="nav-link" data-scroll-target="#industrial-organization">Industrial Organization</a></li>
+  <li><a href="#housing-and-land-economics" id="toc-housing-and-land-economics" class="nav-link" data-scroll-target="#housing-and-land-economics">Housing and Land Economics</a></li>
+  <li><a href="#behavioral-foundations" id="toc-behavioral-foundations" class="nav-link" data-scroll-target="#behavioral-foundations">Behavioral Foundations</a></li>
+  </ul></li>
   <li><a href="#funding" id="toc-funding" class="nav-link" data-scroll-target="#funding">Funding</a></li>
   <li><a href="#policy-and-impact" id="toc-policy-and-impact" class="nav-link" data-scroll-target="#policy-and-impact">Policy and Impact</a></li>
-  <li><a href="#cv-and-contact" id="toc-cv-and-contact" class="nav-link" data-scroll-target="#cv-and-contact">CV and Contact</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -142,18 +313,12 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
 </section>
 <section id="publications" class="level1">
 <h1>Publications</h1>
+<section id="industrial-organization" class="level2">
+<h2 class="anchored" data-anchor-id="industrial-organization">Industrial Organization</h2>
 <ul>
 <li><p><a href="https://doi.org/10.1016/j.regsciurbeco.2021.103754">Consumer Salience and Quality Provision in (Un)Regulated Public Service Markets</a> (with Alexander Rasch and Tobias Wenzel), <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3770534#">Ungated Working Paper</a>, Regional Science and Urban Economics, March 2022</p></li>
-<li><p><a href="https://doi.org/10.1111/psyp.14125">Bid outcome processing in Vickrey auctions: An ERP study</a> (with Alice Newton-Fenner et. al.), Psychophysiology, June 2022</p></li>
 <li><p><a href="https://doi.org/10.1093/oep/gpab042">Data brokers co-opetition</a> (with Leo Madio and Carlo Reggiani), <a href="https://drive.google.com/file/d/1zP3XYgIxemHS0oiaYfEk8W3yVi4B7Eom/view?usp=sharing">Online Supplementary Material</a>, Oxford Economic Papers, July 2022</p></li>
-<li><p><a href="https://dx.doi.org/10.1016/j.landusepol.2021.105400">Fair shares? Advancing land economics through cooperative game theory</a> (with Alexander Lord et. al.), Land Use Policy, July 2021</p></li>
-</ul>
-<!-- with A. Lord, A. Eika, P. Dethier, D.A. Samsura, B. I.Nordahl, D.E. Sommervoll,E. van der Krabben, J-M Halleux -->
-<ul>
 <li><p><a href="https://doi.org/10.1016/j.ijindorg.2020.102582">Curbing Obfuscation: Empower Consumers or Regulate Firms?</a> (with Tobias Wenzel), <a href="https://drive.google.com/file/d/1sSYZEdMAJ6OCJsx5lFwJS7nhJ7f0-Jc2/view?usp=sharing">Ungated Working Paper</a>, <a href="https://drive.google.com/uc?export=download&amp;id=1xjHHXdC60NJEAtLpkfV5q_2CMMymx18_">Online Supplementary Material</a>, International Journal of Industrial Organization, May 2020</p></li>
-<li><p><a href="https://doi.org/10.1016/j.geoforum.2019.07.024">Virtuous or vicious circles? Exploring the behavioural connections between developer contributions and path dependence: Evidence from England</a> (with Alexander Lord, Gemma Burgess and Richard Dunning), Geoforum, November 2019</p></li>
-<li><p><a href="https://doi.org/10.1016/j.jebo.2019.06.011">Evolutionary Equilibrium in Contests with Stochastic Participation: Entry, Effort and Overdissipation</a> (with Burkhard Hehenkamp and Wolfgang Leininger), <a href="https://www.liverpool.ac.uk/media/livacuk/schoolofmanagement/research/economics/evolutionary-equilibrium-in-contests.pdf">Ungated Working Paper</a>, Journal of Economic Behavior and Organization, August 2019</p></li>
-<li><p><a href="https://dx.doi.org/10.1177/0308518X18784600">Can the market be tamed? A thought experiment on the value(s) of planning</a> (with Alexander Lord), Environment and Planning A: Economy and Space, February 2019</p></li>
 <li><p><a href="https://dx.doi.org/10.1111/sjpe.12121">Consumer confusion, obfuscation, and price regulation</a> (with Tobias Wenzel), <a href="https://drive.google.com/file/d/1qnh7Oy3t_0jYmWWdwLFee3uyDDTe7C5a/view?usp=sharing">Ungated Working Paper</a>, Scottish Journal of Political Economy, May 2017</p></li>
 <li><p><a href="http://doi.wiley.com/10.1111/pirs.12165">Price-Sensitive Demand and Market Entry</a> (with Alexander Rasch and Tobias Wenzel), <a href="https://drive.google.com/file/d/1sv34gHkTMTIs8SIe1xTKZRQpD_LqIEBr/view?usp=sharing">Ungated Working Paper</a>, Papers in Regional Science, November 2016</p></li>
 <li><p><a href="http://dx.doi.org/10.1016/j.ijindorg.2015.07.008">Putting on a Tight Leash and Levelling Playing Field: An Experiment in Strategic Obfuscation and Consumer Protection</a> (with Tobias Wenzel), <a href="https://drive.google.com/file/d/110njAGds6h1NYnYsLpbJrMHu-6RTvixy/view?usp=sharing">Ungated Working Paper</a>, International Journal of Industrial Organization, September 2015</p></li>
@@ -164,6 +329,28 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
 <li><p><a href="http://dx.doi.org/10.1016/j.econlet.2010.11.041">Transparency, Price-Dependent Demand and Product Variety</a> (with Tobias Wenzel), <a href="https://drive.google.com/file/d/1TYvGh1HIgNRvs_wKRCxpmWh9RLcRCLen/view?usp=sharing">Ungated Working Paper</a>, Economics Letters, March 2011</p></li>
 <li><p><a href="http://dx.doi.org/10.1016/j.ijindorg.2009.01.002">A Note on the Excess Entry Theorem in Spatial Models with Elastic Demand</a> (with Tobias Wenzel), <a href="https://drive.google.com/file/d/132PeIyjAO5MnoM56_TRj3QDcQTc-_L4F/view?usp=sharing">Ungated Working Paper</a>, International Journal of Industrial Organization, September 2009</p></li>
 </ul>
+</section>
+<section id="housing-and-land-economics" class="level2">
+<h2 class="anchored" data-anchor-id="housing-and-land-economics">Housing and Land Economics</h2>
+<ul>
+<li><p><a href="https://centaur.reading.ac.uk/124436/">Park Life: the difference between having financial information and understanding it on park home owners’ quality of life</a> (with Alexander Lord, Richard Dunning, Ian Wilson and Tom Moore), Town Planning Review, Forthcoming</p></li>
+<li><p><a href="https://dx.doi.org/10.1016/j.landusepol.2021.105400">Fair shares? Advancing land economics through cooperative game theory</a> (with Alexander Lord et. al.), Land Use Policy, July 2021</p></li>
+</ul>
+<!-- with A. Lord, A. Eika, P. Dethier, D.A. Samsura, B. I.Nordahl, D.E. Sommervoll,E. van der Krabben, J-M Halleux -->
+<ul>
+<li><p><a href="https://doi.org/10.1016/j.geoforum.2019.07.024">Virtuous or vicious circles? Exploring the behavioural connections between developer contributions and path dependence: Evidence from England</a> (with Alexander Lord, Gemma Burgess and Richard Dunning), Geoforum, November 2019</p></li>
+<li><p><a href="https://dx.doi.org/10.1177/0308518X18784600">Can the market be tamed? A thought experiment on the value(s) of planning</a> (with Alexander Lord), Environment and Planning A: Economy and Space, February 2019</p></li>
+</ul>
+</section>
+<section id="behavioral-foundations" class="level2">
+<h2 class="anchored" data-anchor-id="behavioral-foundations">Behavioral Foundations</h2>
+<ul>
+<li><p><a href="https://doi.org/10.1016/j.jebo.2019.06.011">Evolutionary Equilibrium in Contests with Stochastic Participation: Entry, Effort and Overdissipation</a> (with Burkhard Hehenkamp and Wolfgang Leininger), <a href="https://www.liverpool.ac.uk/media/livacuk/schoolofmanagement/research/economics/evolutionary-equilibrium-in-contests.pdf">Ungated Working Paper</a>, Journal of Economic Behavior and Organization, August 2019</p></li>
+<li><p><a href="https://doi.org/10.1111/psyp.14125">Bid outcome processing in Vickrey auctions: An ERP study</a> (with Alice Newton-Fenner et. al.), Psychophysiology, June 2022</p></li>
+<li><p><a href="https://doi.org/10.1111/psyp.14313">A comparison of reward processing during Becker–DeGroot–Marschak and Vickrey auctions: an ERP study</a> (with Alice Newton-Fenner et. al.), Psychophysiology, April 2023</p></li>
+<li><p><a href="https://doi.org/10.1371/journal.pone.0286969">Economic value in the brain: a meta-analysis of willingness-to-pay using the Becker-DeGroot-Marschak auction</a>, (with Alice Newton-Fenner et. al.), PLoS ONE, July 2023</p></li>
+</ul>
+</section>
 </section>
 <section id="funding" class="level1">
 <h1>Funding</h1>
@@ -177,31 +364,8 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
 <h1>Policy and Impact</h1>
 <ul>
 <li><p><a href="https://www.gov.uk/government/publications/mobile-homes-the-impact-of-a-change-in-the-maximum-park-home-sale-commission">Mobile homes: The impact of a change in the maximum park home sale commission</a></p></li>
-<li><p><a href="https://scotland.shelter.org.uk/professional_resources/policy_library/understanding_the_true_cost_of_evictions_in_scotland">Understanding the True Cost of Evictions in Scotland</a>, <a href="https://news.stv.tv/scotland/evictions-from-social-housing-cost-councils-nearly-28m?top">STV News</a>, <a href="https://www.scottishhousingnews.com/article/study-reveals-annual-28m-cost-of-evicting-tenants-from-social-housing">Scottish Housing News</a></p></li>
+<li><p><a href="https://scotland.shelter.org.uk/professional_resources/policy_library/understanding_the_true_cost_of_evictions_in_scotland">Understanding the True Cost of Evictions in Scotland</a>, (media: <a href="https://news.stv.tv/scotland/evictions-from-social-housing-cost-councils-nearly-28m?top">STV News</a>, <a href="https://www.scottishhousingnews.com/article/study-reveals-annual-28m-cost-of-evicting-tenants-from-social-housing">Scottish Housing News</a>)</p></li>
 <li><p><a href="https://www.liverpool.ac.uk/management/research/impact/behavioural-insights-research/">Behavioural insights research transforms community infrastructure investment through policy changes to developer contributions</a> (Impact Case)</p></li>
-</ul>
-</section>
-<section id="cv-and-contact" class="level1">
-<h1>CV and Contact</h1>
-<ul>
-<li>Professional experience
-<ul>
-<li>2022 - : Professor of Spatial Economics and Industrial Organization, Henley Business School, University of Reading</li>
-<li>2011 - 2022: Lecturer (2011-15), Senior Lecturer (2015-19) and Reader (2019-2022) in Economics, University of Liverpool Management School
-<ul>
-<li>2020 - 2022: Institutional Lead for North West Social Science Doctoral Training Partnership</li>
-</ul></li>
-</ul></li>
-<li>Education
-<ul>
-<li>PhD in Economics, Dortmund</li>
-<li>Master of Finance, Freiburg</li>
-<li>BSc Management, Tongji</li>
-</ul></li>
-<li>Contact
-<ul>
-<li>yiquan.gu ‘at’ gmail.com</li>
-</ul></li>
 </ul>
 
 
@@ -210,6 +374,19 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {

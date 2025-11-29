@@ -8,11 +8,13 @@ website:
   google-analytics: G-CRVC0BS9GY
   # navbar:
   #   left:
-  #     - href: index.qmd
+  #     - href: cv.qmd
 
 format:
   html:
-    theme: quartz
+    theme: 
+      light: lumen
+      dark: solar
     css: styles.css
     toc: true
 
