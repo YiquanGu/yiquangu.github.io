@@ -3,7 +3,7 @@ title: Publications
 ---
  
 ## Industrial Organization
-- [Consumer Salience and Quality Provision in (Un)Regulated Public Service Markets](https://doi.org/10.1016/j.regsciurbeco.2021.103754) (with Alexander Rasch and Tobias Wenzel), [Ungated Working Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3770534#), Regional Science and Urban Economics, March 2022
+- [Consumer Salience and Quality Provision in (Un)Regulated Public Service Markets](https://doi.org/10.1016/j.regsciurbeco.2021.103754) (with [Alexander Rasch](https://www.dice.hhu.de/en/diceteam/professors/rasch) and Tobias Wenzel), [Ungated Working Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3770534#), Regional Science and Urban Economics, March 2022
 
 
 - [Data brokers co-opetition](https://doi.org/10.1093/oep/gpab042) (with Leo Madio and Carlo Reggiani), [Online Supplementary Material](https://drive.google.com/file/d/1zP3XYgIxemHS0oiaYfEk8W3yVi4B7Eom/view?usp=sharing), Oxford Economic Papers, July 2022
@@ -20,7 +20,7 @@ title: Publications
 
 - [Strategic obfuscation and consumer protection policy](http://dx.doi.org/10.1111/joie.12060) (with Tobias Wenzel), [Ungated Working Paper](https://drive.google.com/file/d/1smAoB8yOBVANAqTwx_jtInB5yWHZWzPU/view?usp=sharing), Journal of Industrial Economics, December 2014
 
-- [Too much of a good thing? Welfare consequences of market transparency](https://www.jstor.org/stable/24548983)(with Burkhard Hehenkamp), [Ungated Working Paper](https://drive.google.com/file/d/1qhSjgax1k2Ftuy1Qw8n6wF67UC_o0hhQ/view?usp=sharing), Journal of Institutional and Theoretical Economics, June 2014
+- [Too much of a good thing? Welfare consequences of market transparency](https://www.jstor.org/stable/24548983) (with [Burkhard Hehenkamp](https://wiwi.uni-paderborn.de/en/dep4/wipo)), [Ungated Working Paper](https://drive.google.com/file/d/1qhSjgax1k2Ftuy1Qw8n6wF67UC_o0hhQ/view?usp=sharing), Journal of Institutional and Theoretical Economics, June 2014
 
 
 - [Transparency, Entry, and Productivity](http://dx.doi.org/10.1016/j.econlet.2011.11.016) (with Tobias Wenzel), [Ungated Working Paper](https://drive.google.com/file/d/1PWwykGbqasHOKWBAuOt4VdO4ZhJ5gLd6/view?usp=sharing), Economics Letters, April 2012
@@ -35,7 +35,7 @@ title: Publications
 
 
 ## Housing and Land Economics 
-- [Park Life: the difference between having financial information and understanding it on park home owners’ quality of life](https://centaur.reading.ac.uk/124436/) (with Alexander Lord, Richard Dunning, Ian Wilson and Tom Moore), [Ungated Working Paper](papers/paper 8.0 final web.html), Town Planning Review, Forthcoming
+- [Park Life: the difference between having financial information and understanding it on park home owners’ quality of life](https://centaur.reading.ac.uk/124436/) (with [Alexander Lord](https://www.liverpool.ac.uk/people/alexander-lord), [Richard Dunning](https://www.liverpool.ac.uk/people/richard-dunning), [Ian Wilson](https://www.shu.ac.uk/about-us/our-people/staff-profiles/ian-wilson) and [Thomas Moore](https://www.liverpool.ac.uk/people/thomas-moore)), [Ungated Working Paper](papers/paper 8.0 final web.html), Town Planning Review, Forthcoming
 
 <!-- [Ungated PDF file](https://drive.google.com/file/d/1nw0-tNRaYyNsB3pnVEvNZcP5VlHoGaFA/view?usp=sharing) -->
 
@@ -43,15 +43,15 @@ title: Publications
 
 <!-- with A. Lord, A. Eika, P. Dethier, D.A. Samsura, B. I.Nordahl, D.E. Sommervoll,E. van der Krabben, J-M Halleux -->
 
-- [Virtuous or vicious circles? Exploring the behavioural connections between developer contributions and path dependence: Evidence from England](https://doi.org/10.1016/j.geoforum.2019.07.024) (with Alexander Lord, Gemma Burgess and Richard Dunning), Geoforum, November 2019
+- [Virtuous or vicious circles? Exploring the behavioural connections between developer contributions and path dependence: Evidence from England](https://doi.org/10.1016/j.geoforum.2019.07.024) (with Alexander Lord, [Gemma Burgess](https://www.landecon.cam.ac.uk/staff/dr-gemma-burgess) and Richard Dunning), Geoforum, November 2019
 
 - [Can the market be tamed? A thought experiment on the value(s) of planning](https://dx.doi.org/10.1177/0308518X18784600) (with Alexander Lord), Environment and Planning A: Economy and Space, February 2019
 
 
 ## Behavioural Foundations
-- [Evolutionary Equilibrium in Contests with Stochastic Participation: Entry, Effort and Overdissipation](https://doi.org/10.1016/j.jebo.2019.06.011) (with Burkhard Hehenkamp and Wolfgang Leininger), [Ungated Working Paper](https://www.liverpool.ac.uk/media/livacuk/schoolofmanagement/research/economics/evolutionary-equilibrium-in-contests.pdf), Journal of Economic Behavior and Organization, August 2019
+- [Evolutionary Equilibrium in Contests with Stochastic Participation: Entry, Effort and Overdissipation](https://doi.org/10.1016/j.jebo.2019.06.011) (with Burkhard Hehenkamp and [Wolfgang Leininger](https://www.ifo.de/en/cesifo/network-member/leininger-wolfgang)), [Ungated Working Paper](https://www.liverpool.ac.uk/media/livacuk/schoolofmanagement/research/economics/evolutionary-equilibrium-in-contests.pdf), Journal of Economic Behavior and Organization, August 2019
 
-- [Bid outcome processing in Vickrey auctions: An ERP study](https://doi.org/10.1111/psyp.14125) (with Alice Newton-Fenner et. al.), Psychophysiology, June 2022
+- [Bid outcome processing in Vickrey auctions: An ERP study](https://doi.org/10.1111/psyp.14125) (with [Alice Newton-Fenner](https://orcid.org/0000-0002-3572-1516) et. al.), Psychophysiology, June 2022
 
 - [A comparison of reward processing during Becker–DeGroot–Marschak and Vickrey auctions: an ERP study](https://doi.org/10.1111/psyp.14313) (with Alice Newton-Fenner et. al.), Psychophysiology, April 2023
 
