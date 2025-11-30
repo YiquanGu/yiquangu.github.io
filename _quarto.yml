@@ -8,7 +8,8 @@ project:
     - "*.qmd"
 
 website:
-  google-analytics: G-CRVC0BS9GY
+  google-analytics:
+    tracking-id: "G-CRVC0BS9GY"
   navbar:
     tools:
       - icon: github
