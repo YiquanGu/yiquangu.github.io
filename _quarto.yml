@@ -1,11 +1,14 @@
 project:
   type: website
+  resources: 
+    - 'papers/paper 8.0 final web.html'
   output-dir: docs
   render:
     - "*.qmd"
 
 website:
   google-analytics: G-CRVC0BS9GY
+
   navbar:
     tools:
       - icon: github
