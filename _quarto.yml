@@ -9,11 +9,12 @@ project:
 
 website:
   google-analytics: G-CRVC0BS9GY
-
   navbar:
     tools:
       - icon: github
-    background: primary
+        href: https://github.com/YiquanGu
+      - icon: linkedin
+        href: https://www.linkedin.com/in/yiquan-gu-259067247/
     search: false
     left:
       - text: "Home"
