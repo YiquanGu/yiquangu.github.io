@@ -35,9 +35,7 @@ title: Papers
 
 
 ## Housing and Land Economics 
-- [Park Life: the difference between having financial information and understanding it on park home owners’ quality of life](https://centaur.reading.ac.uk/124436/) (with [Alexander Lord](https://www.liverpool.ac.uk/people/alexander-lord), [Richard Dunning](https://www.liverpool.ac.uk/people/richard-dunning), [Ian Wilson](https://www.shu.ac.uk/about-us/our-people/staff-profiles/ian-wilson) and [Thomas Moore](https://www.liverpool.ac.uk/people/thomas-moore)), Town Planning Review, Forthcoming
-
-<!-- , [Ungated Working Paper](papers/paper 8.0 final web.html),  -->
+- [Park Life: the difference between having financial information and understanding it on park home owners’ quality of life](https://doi.org/10.3828/tpr.2025.40) (with [Alexander Lord](https://www.liverpool.ac.uk/people/alexander-lord), [Richard Dunning](https://www.liverpool.ac.uk/people/richard-dunning), [Ian Wilson](https://www.shu.ac.uk/about-us/our-people/staff-profiles/ian-wilson) and [Thomas Moore](https://www.liverpool.ac.uk/people/thomas-moore)), [Ungated Working Paper](papers/paper 8.0 final web.html), Town Planning Review, December 2025
 
 <!-- [Ungated PDF file](https://drive.google.com/file/d/1nw0-tNRaYyNsB3pnVEvNZcP5VlHoGaFA/view?usp=sharing) -->
 
