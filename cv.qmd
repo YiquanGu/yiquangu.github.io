@@ -1,5 +1,6 @@
 ---
 title: CV and Contact
+toc: true
 ---
 
 ## Professional experience
