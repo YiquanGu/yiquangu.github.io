@@ -14,5 +14,5 @@ toc: true
 - Master of Finance, [University of Freiburg](https://uni-freiburg.de/)
 - BSc Management, [Tongji University](https://www.tongji.edu.cn/)
 
-## Contact
-- yiquan.gu 'at' gmail.com
+## Contact 
+- yiquan.gu ‘at’ gmail.com

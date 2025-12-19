@@ -7,6 +7,15 @@ project:
   render:
     - "*.qmd"
 
+format:
+  html:
+    email-obfuscation: javascript
+    theme: 
+      light: journal
+      dark: solar
+    toc: false
+
+
 website:
   google-analytics:
     tracking-id: "G-CRVC0BS9GY"
@@ -24,12 +33,6 @@ website:
       - projects.qmd
       - cv.qmd
 
-format:
-  html:
-    theme: 
-      light: journal
-      dark: solar
-    toc: false
 
 
 
