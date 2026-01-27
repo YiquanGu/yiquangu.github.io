@@ -16,7 +16,7 @@ title: "Yiquan Gu"
 
 - [Park Life: the difference between having financial information and understanding it on park home owners’ quality of life](https://doi.org/10.3828/tpr.2025.40) (with [Alexander Lord](https://www.liverpool.ac.uk/people/alexander-lord), [Richard Dunning](https://www.liverpool.ac.uk/people/richard-dunning), [Ian Wilson](https://www.shu.ac.uk/about-us/our-people/staff-profiles/ian-wilson) and [Thomas Moore](https://www.liverpool.ac.uk/people/thomas-moore)), [Working Paper](papers/paper 8.0 final web.html), Town Planning Review, December 2025
 
-
+<!-- 
 # Working Papers
 
-- [Exclusive data, price manipulation and market leadership](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4002261) (with [Leo Madio](https://sites.google.com/view/leonardomadio/) and [Carlo Reggiani](https://sites.google.com/view/carloreggianieconomics/home)) 
+- [Exclusive data, price manipulation and market leadership](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4002261) (with [Leo Madio](https://sites.google.com/view/leonardomadio/) and [Carlo Reggiani](https://sites.google.com/view/carloreggianieconomics/home))  -->
