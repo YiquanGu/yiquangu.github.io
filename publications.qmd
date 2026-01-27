@@ -4,6 +4,8 @@ toc: true
 ---
  
 ## Industrial Organization
+- [Firm Prominence and Price Framing](papers/prominence_jebo.pdf) (with [Ioana Chioveanu](https://sites.google.com/site/ioanacchioveanu/home) and [Tobias Wenzel](https://sites.google.com/site/tobwenzel/home)), Journal of Economic Behavior and Organization, forthcoming
+
 - [Consumer Salience and Quality Provision in (Un)Regulated Public Service Markets](https://doi.org/10.1016/j.regsciurbeco.2021.103754) (with [Alexander Rasch](https://www.dice.hhu.de/en/diceteam/professors/rasch) and [Tobias Wenzel](https://sites.google.com/site/tobwenzel/home)), [Ungated Working Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3770534#), Regional Science and Urban Economics, March 2022
 
 - [Data brokers co-opetition](https://doi.org/10.1093/oep/gpab042) (with [Leo Madio](https://sites.google.com/view/leonardomadio/) and [Carlo Reggiani](https://sites.google.com/view/carloreggianieconomics/home)), [Online Supplementary Material](https://drive.google.com/file/d/1zP3XYgIxemHS0oiaYfEk8W3yVi4B7Eom/view?usp=sharing), Oxford Economic Papers, July 2022
