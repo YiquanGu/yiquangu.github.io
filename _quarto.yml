@@ -1,8 +1,5 @@
 project:
   type: website
-  resources: 
-    - 'papers/paper 8.0 final web.html'
-    - 'papers/paper-8.0-final-web.pdf'
   output-dir: docs
   render:
     - "*.qmd"
