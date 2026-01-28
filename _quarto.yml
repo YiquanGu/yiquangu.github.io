@@ -8,7 +8,7 @@ format:
   html:
     email-obfuscation: javascript
     theme: 
-      light: journal
+      light: cosmo
       dark: solar
     toc: false
 
