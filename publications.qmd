@@ -4,7 +4,7 @@ toc: true
 ---
  
 ## Industrial Organization
-- [Firm Prominence and Price Framing](papers/prominence_jebo.pdf) (with [Ioana Chioveanu](https://sites.google.com/site/ioanacchioveanu/home) and [Tobias Wenzel](https://sites.google.com/site/tobwenzel/home)), Journal of Economic Behavior and Organization, forthcoming
+- [Firm Prominence and Price Framing](https://doi.org/10.1016/j.jebo.2026.107458) (with [Ioana Chioveanu](https://sites.google.com/site/ioanacchioveanu/home) and [Tobias Wenzel](https://sites.google.com/site/tobwenzel/home)), Journal of Economic Behavior and Organization, March 2026
 
 - [Consumer Salience and Quality Provision in (Un)Regulated Public Service Markets](https://doi.org/10.1016/j.regsciurbeco.2021.103754) (with [Alexander Rasch](https://www.dice.hhu.de/en/diceteam/professors/rasch) and [Tobias Wenzel](https://sites.google.com/site/tobwenzel/home)), [Ungated Working Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3770534#), Regional Science and Urban Economics, March 2022
 
