@@ -42,10 +42,10 @@ toc: true
 
 
 ## Behavioural Foundations
-- [Evolutionary Equilibrium in Contests with Stochastic Participation: Entry, Effort and Overdissipation](https://doi.org/10.1016/j.jebo.2019.06.011) (with [Burkhard Hehenkamp](https://wiwi.uni-paderborn.de/en/dep4/wipo) and [Wolfgang Leininger](https://www.ifo.de/en/cesifo/network-member/leininger-wolfgang)), [Ungated Working Paper :memo:](https://www.liverpool.ac.uk/media/livacuk/schoolofmanagement/research/economics/evolutionary-equilibrium-in-contests.pdf), Journal of Economic Behavior and Organization, August 2019
-
-- [Bid outcome processing in Vickrey auctions: An ERP study](https://doi.org/10.1111/psyp.14125) (with [Alice Newton-Fenner](https://orcid.org/0000-0002-3572-1516) et. al.), Psychophysiology, June 2022
+- [Economic value in the brain: a meta-analysis of willingness-to-pay using the Becker-DeGroot-Marschak auction](https://doi.org/10.1371/journal.pone.0286969), (with Alice Newton-Fenner et. al.), PLoS ONE, July 2023
 
 - [A comparison of reward processing during Becker–DeGroot–Marschak and Vickrey auctions: an ERP study](https://doi.org/10.1111/psyp.14313) (with Alice Newton-Fenner et. al.), Psychophysiology, April 2023
 
-- [Economic value in the brain: a meta-analysis of willingness-to-pay using the Becker-DeGroot-Marschak auction](https://doi.org/10.1371/journal.pone.0286969), (with Alice Newton-Fenner et. al.), PLoS ONE, July 2023
+- [Bid outcome processing in Vickrey auctions: An ERP study](https://doi.org/10.1111/psyp.14125) (with [Alice Newton-Fenner](https://orcid.org/0000-0002-3572-1516) et. al.), Psychophysiology, June 2022
+
+- [Evolutionary Equilibrium in Contests with Stochastic Participation: Entry, Effort and Overdissipation](https://doi.org/10.1016/j.jebo.2019.06.011) (with [Burkhard Hehenkamp](https://wiwi.uni-paderborn.de/en/dep4/wipo) and [Wolfgang Leininger](https://www.ifo.de/en/cesifo/network-member/leininger-wolfgang)), [Ungated Working Paper :memo:](https://www.liverpool.ac.uk/media/livacuk/schoolofmanagement/research/economics/evolutionary-equilibrium-in-contests.pdf), Journal of Economic Behavior and Organization, August 2019
