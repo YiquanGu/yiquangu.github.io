@@ -5,7 +5,7 @@ toc: true
  
 ## Industrial Organization
 
-- [Product differentiation, economies of scale and entry](https://doi.org/10.1016/j.econlet.2026.113049) (with [Tobias Wenzel](https://sites.google.com/site/tobwenzel/home)), [Working Paper :memo:](papers/scale_EL.pdf), Economics Letters, forthcoming
+- [Product differentiation, economies of scale and entry](https://doi.org/10.1016/j.econlet.2026.113049) (with [Tobias Wenzel](https://sites.google.com/site/tobwenzel/home)), [Ungated Working Paper :memo:](papers/scale_EL.pdf), Economics Letters, forthcoming
 
 - [Firm Prominence and Price Framing](https://doi.org/10.1016/j.jebo.2026.107458) (with [Ioana Chioveanu](https://sites.google.com/site/ioanacchioveanu/home) and [Tobias Wenzel](https://sites.google.com/site/tobwenzel/home)), Journal of Economic Behavior and Organization, March 2026
 
