@@ -31,8 +31,8 @@ website:
       - publications.qmd
       - projects.qmd
       - cv.qmd
-      - text: "RWDCR"        
-        href: programme.qmd
+      - text: "Workshop"        
+        href: workshop.qmd
 
 
 
