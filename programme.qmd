@@ -1,0 +1,547 @@
+---
+title: "Reading Workshop on Digital Competition & Regulation"
+subtitle: |
+  June 12 & 13, 2026
+
+  [Henley Business School](https://www.google.com/maps/search/?api=1&query=Henley+Business+School+Whiteknights+Campus+Reading+RG6+6UD), Room G10 | University of Reading
+  
+  <span class="support-line">With support from the British Academy</span>
+date: today
+language:
+  title-block-published: "Programme Version"
+format:
+  html:
+    css: style.css
+---
+
+```{=html}
+<div id="password-gate">
+  <div class="pw-box">
+    <h2>Workshop Programme</h2>
+    <p>Please enter the password to view the programme.</p>
+    <input type="password" id="pw-input" placeholder="Password" autocomplete="current-password">
+    <button onclick="checkPassword()">Enter</button>
+    <p id="pw-error" style="display:none;">Incorrect password. Please try again.</p>
+  </div>
+</div>
+
+<style>
+#password-gate {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.97);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pw-box {
+  text-align: center;
+  max-width: 380px;
+  width: 90%;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+.pw-box h2 { margin-bottom: 0.5rem; }
+.pw-box p  { color: #666; margin-bottom: 1.25rem; }
+#pw-input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  box-sizing: border-box;
+}
+.pw-box button {
+  width: 100%;
+  padding: 0.7rem;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.pw-box button:hover { background: #0b5ed7; }
+#pw-error { color: #dc3545; margin-top: 0.6rem; }
+</style>
+
+<script>
+(function () {
+  const CORRECT_HASH = 'c63d03523c5cc4975a7d26e3b5a9caf47c5bd0aef8fea1ddefc859249382613c';
+
+  async function hash(str) {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+  }
+
+  window.checkPassword = async function () {
+    const input = document.getElementById('pw-input').value;
+    const h = await hash(input);
+    if (h === CORRECT_HASH) {
+      document.getElementById('password-gate').style.display = 'none';
+      sessionStorage.setItem('workshop-auth', CORRECT_HASH);
+    } else {
+      const err = document.getElementById('pw-error');
+      err.style.display = 'block';
+      document.getElementById('pw-input').value = '';
+      document.getElementById('pw-input').focus();
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Allow Enter key
+    document.getElementById('pw-input').addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') window.checkPassword();
+    });
+    // Skip gate if already authenticated this session
+    if (sessionStorage.getItem('workshop-auth') === CORRECT_HASH) {
+      document.getElementById('password-gate').style.display = 'none';
+    }
+  });
+}());
+</script>
+```
+
+::: {.panel-tabset}
+
+## Day 1: Friday, June 12, 2026
+
+::: {.schedule-item}
+::: {.time-col}
+[08:30 – 08:55]{.time-badge}
+:::
+::: {.content-col}
+::: {.event-card .coffee}
+<span class="event-icon">☕</span>
+<div>
+  <p class="event-title">Coffee and Registration</p>
+</div>
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[08:55 – 09:00]{.time-badge}
+:::
+::: {.content-col}
+::: {.event-card}
+<span class="event-icon">🗣️</span>
+<div>
+  <p class="event-title">Welcome</p>
+</div>
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[09:00 – 10:30]{.time-badge}
+:::
+::: {.content-col}
+<p class="session-title">Session 1: Information, AI, and Platform Quality</p>
+
+::: {.talk-list}
+::: {.talk-item}
+::: {.talk-meta}
+[Antonio Russo]{.speaker} ([IMT Business School]{.affiliation}) [09:00 – 09:30]{.talk-time}
+:::
+::: {.talk-title}
+AI Summaries and Content Discovery
+:::
+:::
+
+::: {.talk-item}
+::: {.talk-meta}
+[Wynne Lam]{.speaker} ([University of Edinburgh]{.affiliation}) [09:30 – 10:00]{.talk-time}
+:::
+::: {.talk-title}
+Innovation and Platform Information Disclosure
+:::
+:::
+
+::: {.talk-item}
+::: {.talk-meta}
+[Leonardo Madio]{.speaker} ([University of Padova]{.affiliation}) [10:00 – 10:30]{.talk-time}
+:::
+::: {.talk-title}
+Curation with moral hazard: Why platforms host low quality
+:::
+:::
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[10:30 – 11:00]{.time-badge}
+:::
+::: {.content-col}
+::: {.event-card .coffee}
+<span class="event-icon">☕</span>
+<div>
+  <p class="event-title">Coffee Break</p>
+</div>
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[11:00 – 12:00]{.time-badge}
+:::
+::: {.content-col}
+<p class="session-title">Session 2: Sectoral Platforms and Price Matching</p>
+
+::: {.talk-list}
+::: {.talk-item}
+::: {.talk-meta}
+[Rhys Williams]{.speaker} ([University of Cambridge]{.affiliation}) [11:00 – 11:30]{.talk-time}
+:::
+::: {.talk-title}
+Never Knowingly Undersold: Do Price Match Guarantees Result in Lower Prices?
+:::
+:::
+
+::: {.talk-item}
+::: {.talk-meta}
+[Anna Rita Bennato]{.speaker} ([Loughborough University]{.affiliation}) [11:30 – 12:00]{.talk-time}
+:::
+::: {.talk-title}
+Local Energy for Sale: Pricing and Participation on Energy Trading Platform
+:::
+:::
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[12:00 – 13:30]{.time-badge}
+:::
+::: {.content-col}
+::: {.event-card .lunch}
+<span class="event-icon">🍽️</span>
+<div>
+  <p class="event-title">Lunch Break</p>
+  <p class="event-desc">Blandfords, <a href="https://www.google.com/maps/search/?api=1&query=Park+House+University+of+Reading" target="_blank">Park House</a></p>
+</div>
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[13:30 – 13:45]{.time-badge}
+:::
+::: {.content-col}
+<p class="session-title">Policy Keynote</p>
+
+::: {.talk-list}
+::: {.talk-item}
+::: {.talk-meta}
+[Lewis McQuarrie]{.speaker} ([Digital Regulation Cooperation Forum]{.affiliation})
+:::
+:::
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[13:45 – 15:15]{.time-badge}
+:::
+::: {.content-col}
+<p class="session-title">Session 3: Open Banking, Smart Data, and Price Discrimination</p>
+
+::: {.talk-list}
+::: {.talk-item}
+::: {.talk-meta}
+[Helen Weeds]{.speaker} ([Charles River Associates and Centre for Competition Policy]{.affiliation}) [13:45 – 14:15]{.talk-time}
+:::
+::: {.talk-title}
+Open Banking Payments: Promoting Competition and Innovation in Retail Payments
+:::
+:::
+
+::: {.talk-item}
+::: {.talk-meta}
+[Yiquan Gu]{.speaker} ([University of Reading]{.affiliation}) [14:15 – 14:45]{.talk-time}
+:::
+::: {.talk-title}
+UK’s Smart Data Schemes
+:::
+::: {.talk-title style="margin-top: 0.5rem;"}
+When Data Calls the Tune: Price Personalization and Price Leadership
+:::
+:::
+
+::: {.talk-item}
+::: {.talk-meta}
+[Ioana Chioveanu]{.speaker} ([Nottingham University Business School]{.affiliation}) [14:45 – 15:15]{.talk-time}
+:::
+::: {.talk-title}
+Price Discrimination Under Asymmetric Access to Consumer Data
+:::
+:::
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[15:15 – 15:45]{.time-badge}
+:::
+::: {.content-col}
+::: {.event-card .coffee}
+<span class="event-icon">☕</span>
+<div>
+  <p class="event-title">Coffee Break</p>
+</div>
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[15:45 – 17:15]{.time-badge}
+:::
+::: {.content-col}
+<p class="session-title">Session 4: Retail Coordination, Platform Services, and Encroachment</p>
+
+::: {.talk-list}
+::: {.talk-item}
+::: {.talk-meta}
+[Nicolas de Roos]{.speaker} ([University of Liverpool]{.affiliation}) [15:45 – 16:15]{.talk-time}
+:::
+::: {.talk-title}
+Negotiating Coordination: A Study in Retail Gasoline
+:::
+:::
+
+::: {.talk-item}
+::: {.talk-meta}
+[Shiva Shekhar]{.speaker} ([Tilburg University]{.affiliation}) [16:15 – 16:45]{.talk-time}
+:::
+::: {.talk-title}
+Data Regulation, Platform Encroachment, and the Matthew Effect
+:::
+:::
+
+::: {.talk-item}
+::: {.talk-meta}
+[Greg Taylor]{.speaker} ([University of Oxford]{.affiliation}) [16:45 – 17:15]{.talk-time}
+:::
+::: {.talk-title}
+Seller-Side Tying of Platform Services
+:::
+:::
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[17:30]{.time-badge}
+:::
+::: {.content-col}
+::: {.event-card .dinner}
+<span class="event-icon">🥤</span>
+<div>
+  <p class="event-title">Drinks Reception</p>
+  <p class="event-desc"><a href="https://www.google.com/maps/search/?api=1&query=Park+House+University+of+Reading" target="_blank">Park House</a></p>
+</div>
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[19:30]{.time-badge}
+:::
+::: {.content-col}
+::: {.event-card .dinner}
+<span class="event-icon">🍽️</span>
+<div>
+  <p class="event-title">Workshop Dinner</p>
+</div>
+:::
+:::
+:::
+
+## Day 2: Saturday, June 13, 2026
+
+::: {.schedule-item}
+::: {.time-col}
+[08:30 – 09:00]{.time-badge}
+:::
+::: {.content-col}
+::: {.event-card .coffee}
+<span class="event-icon">☕</span>
+<div>
+  <p class="event-title">Coffee and Registration</p>
+</div>
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[09:00 – 10:30]{.time-badge}
+:::
+::: {.content-col}
+<p class="session-title">Session 5: Data infrastructure, Health, and Privacy</p>
+
+::: {.talk-list}
+::: {.talk-item}
+::: {.talk-meta}
+[Luca Sandrini]{.speaker} ([University of Padova and ZEW Mannheim]{.affiliation}) [09:00 – 09:30]{.talk-time}
+:::
+::: {.talk-title}
+Agglomeration and Strategic Congestion in Data Centers
+:::
+:::
+
+::: {.talk-item}
+::: {.talk-meta}
+[Burkhard Hehenkamp]{.speaker} ([Paderborn University]{.affiliation}) [09:30 – 10:00]{.talk-time}
+:::
+::: {.talk-title}
+Sustainable hospital regulation: On the welfare implications of digital treatments
+:::
+:::
+
+::: {.talk-item}
+::: {.talk-meta}
+[Stefano Colombo]{.speaker} ([Università Cattolica del Sacro Cuore]{.affiliation}) [10:00 – 10:30]{.talk-time}
+:::
+::: {.talk-title}
+Strategic anonymity and behavior-based pricing
+:::
+:::
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[10:30 – 11:00]{.time-badge}
+:::
+::: {.content-col}
+::: {.event-card .coffee}
+<span class="event-icon">☕</span>
+<div>
+  <p class="event-title">Coffee Break</p>
+</div>
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[11:00 – 12:00]{.time-badge}
+:::
+::: {.content-col}
+<p class="session-title">Keynote</p>
+
+::: {.talk-list}
+::: {.talk-item}
+::: {.talk-meta}
+[Andrew Rhodes]{.speaker} ([TSE]{.affiliation}) [11:00 – 12:00]{.talk-time}
+:::
+::: {.talk-title}
+Digital Ecosystems and Data Regulation
+:::
+:::
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[12:00 – 13:15]{.time-badge}
+:::
+::: {.content-col}
+::: {.event-card .lunch}
+<span class="event-icon">🍽️</span>
+<div>
+  <p class="event-title">Lunch Break</p>
+  <p class="event-desc">HBS Foyer</p>
+</div>
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[13:15 – 14:45]{.time-badge}
+:::
+::: {.content-col}
+<p class="session-title">Session 6: Algorithms, Steering, and Data Markets</p>
+
+::: {.talk-list}
+::: {.talk-item}
+::: {.talk-meta}
+[Subhasish Modak Chowdhury]{.speaker} ([University of Sheffield]{.affiliation}) [13:15 – 13:45]{.talk-time}
+:::
+::: {.talk-title}
+Default Search Engine Settings and Consumer Switch Behaviour: Results from a Field Experiment
+:::
+:::
+
+::: {.talk-item}
+::: {.talk-meta}
+[Muxin Li]{.speaker} ([Fudan University]{.affiliation}) [13:45 – 14:15]{.talk-time}
+:::
+::: {.talk-title}
+Demand Steering and Market Selection: Vertical Contracts and Algorithmic Allocation
+:::
+:::
+
+::: {.talk-item}
+::: {.talk-meta}
+[Tobias Wenzel]{.speaker} ([DICE]{.affiliation}) [14:15 – 14:45]{.talk-time}
+:::
+::: {.talk-title}
+Mandating privacy spillovers: Interoperability in data markets
+:::
+:::
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[14:45]{.time-badge}
+:::
+::: {.content-col}
+::: {.event-card}
+<span class="event-icon">🗣️</span>
+<div>
+  <p class="event-title">Concluding Thanks</p>
+</div>
+:::
+:::
+:::
+
+::: {.schedule-item}
+::: {.time-col}
+[15:00]{.time-badge}
+:::
+::: {.content-col}
+::: {.event-card .coffee}
+<span class="event-icon">🥤</span>
+<div>
+  <p class="event-title">Post-workshop Drinks</p>
+  <p class="event-desc"><a href="https://www.google.com/maps/search/?api=1&query=Park+House+University+of+Reading" target="_blank">Park House</a></p>
+</div>
+:::
+:::
+:::
+
+:::

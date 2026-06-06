@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-06-06">
 
-<title>CV and Contact</title>
+<title>Reading Workshop on Digital Competition &amp; Regulation</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -85,9 +86,10 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
 </script>
 
 
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -273,11 +275,11 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
 <span class="menu-text">Funding and Impact</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./cv.html" aria-current="page"> 
+    <a class="nav-link" href="./cv.html"> 
 <span class="menu-text">CV and Contact</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./programme.html"> 
+    <a class="nav-link active" href="./programme.html" aria-current="page"> 
 <span class="menu-text">RWDCR</span></a>
   </li>  
 </ul>
@@ -294,24 +296,17 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#professional-experience" id="toc-professional-experience" class="nav-link active" data-scroll-target="#professional-experience">Professional experience</a></li>
-  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">CV and Contact</h1>
+<h1 class="title">Reading Workshop on Digital Competition &amp; Regulation</h1>
+<p class="subtitle lead">June 12 &amp; 13, 2026<br>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Henley+Business+School+Whiteknights+Campus+Reading+RG6+6UD">Henley Business School</a>, Room G10 | University of Reading<br>
+<span class="support-line">With support from the British Academy</span></p>
 </div>
 
 
@@ -319,6 +314,12 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Programme Version</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 6, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -328,33 +329,547 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
 </header>
 
 
-<section id="professional-experience" class="level2">
-<h2 class="anchored" data-anchor-id="professional-experience">Professional experience</h2>
-<ul>
-<li>2022 - : <a href="https://www.henley.ac.uk/people/professor-yiquan-gu">Professor of Spatial Economics and Industrial Organization</a>, <a href="https://www.henley.ac.uk/">Henley Business School</a>, <a href="http://www.reading.ac.uk/">University of Reading</a></li>
-<li>2011 - 2022: Lecturer (2011-15), Senior Lecturer (2015-19) and Reader (2019-2022) in Economics, <a href="https://www.liverpool.ac.uk/">University of Liverpool</a> <a href="https://www.liverpool.ac.uk/management/">Management School</a>
-<ul>
-<li>2020 - 2022: Institutional Lead for the <a href="https://nwssdtp.ac.uk/">North West Social Science Doctoral Training Partnership</a></li>
-</ul></li>
-<li>2006 - 2011: Wissenschaftlicher Mitarbeiter in Forschung und Lehre, <a href="https://www.tu-dortmund.de/">TU Dortmund University</a></li>
-</ul>
-</section>
-<section id="education" class="level2">
-<h2 class="anchored" data-anchor-id="education">Education</h2>
-<ul>
-<li>PhD in Economics (Dr.&nbsp;rer. pol.), <a href="https://www.tu-dortmund.de/">TU Dortmund University</a></li>
-<li>Master of Finance, <a href="https://uni-freiburg.de/">University of Freiburg</a></li>
-<li>BSc Management, <a href="https://www.tongji.edu.cn/">Tongji University</a></li>
-</ul>
-</section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<ul>
-<li>yiquan.gu ‘at’ gmail.com</li>
-</ul>
+<div id="password-gate">
+  <div class="pw-box">
+    <h2 class="anchored">Workshop Programme</h2>
+    <p>Please enter the password to view the programme.</p>
+    <input type="password" id="pw-input" placeholder="Password" autocomplete="current-password">
+    <button onclick="checkPassword()">Enter</button>
+    <p id="pw-error" style="display:none;">Incorrect password. Please try again.</p>
+  </div>
+</div>
+
+<style>
+#password-gate {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.97);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pw-box {
+  text-align: center;
+  max-width: 380px;
+  width: 90%;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+.pw-box h2 { margin-bottom: 0.5rem; }
+.pw-box p  { color: #666; margin-bottom: 1.25rem; }
+#pw-input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  box-sizing: border-box;
+}
+.pw-box button {
+  width: 100%;
+  padding: 0.7rem;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.pw-box button:hover { background: #0b5ed7; }
+#pw-error { color: #dc3545; margin-top: 0.6rem; }
+</style>
+
+<script>
+(function () {
+  const CORRECT_HASH = 'c63d03523c5cc4975a7d26e3b5a9caf47c5bd0aef8fea1ddefc859249382613c';
+
+  async function hash(str) {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+  }
+
+  window.checkPassword = async function () {
+    const input = document.getElementById('pw-input').value;
+    const h = await hash(input);
+    if (h === CORRECT_HASH) {
+      document.getElementById('password-gate').style.display = 'none';
+      sessionStorage.setItem('workshop-auth', CORRECT_HASH);
+    } else {
+      const err = document.getElementById('pw-error');
+      err.style.display = 'block';
+      document.getElementById('pw-input').value = '';
+      document.getElementById('pw-input').focus();
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Allow Enter key
+    document.getElementById('pw-input').addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') window.checkPassword();
+    });
+    // Skip gate if already authenticated this session
+    if (sessionStorage.getItem('workshop-auth') === CORRECT_HASH) {
+      document.getElementById('password-gate').style.display = 'none';
+    }
+  });
+}());
+</script>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Day 1: Friday, June 12, 2026</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Day 2: Saturday, June 13, 2026</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">08:30 – 08:55</span></p>
+</div>
+<div class="content-col">
+<div class="event-card coffee">
+<span class="event-icon">☕</span>
+<div>
+<p class="event-title">
+Coffee and Registration
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">08:55 – 09:00</span></p>
+</div>
+<div class="content-col">
+<div class="event-card">
+<span class="event-icon">🗣️</span>
+<div>
+<p class="event-title">
+Welcome
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">09:00 – 10:30</span></p>
+</div>
+<div class="content-col">
+<p class="session-title">
+Session 1: Information, AI, and Platform Quality
+</p>
+<div class="talk-list">
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Antonio Russo</span> (<span class="affiliation">IMT Business School</span>) <span class="talk-time">09:00 – 09:30</span></p>
+</div>
+<div class="talk-title">
+<p>AI Summaries and Content Discovery</p>
+</div>
+</div>
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Wynne Lam</span> (<span class="affiliation">University of Edinburgh</span>) <span class="talk-time">09:30 – 10:00</span></p>
+</div>
+<div class="talk-title">
+<p>Innovation and Platform Information Disclosure</p>
+</div>
+</div>
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Leonardo Madio</span> (<span class="affiliation">University of Padova</span>) <span class="talk-time">10:00 – 10:30</span></p>
+</div>
+<div class="talk-title">
+<p>Curation with moral hazard: Why platforms host low quality</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">10:30 – 11:00</span></p>
+</div>
+<div class="content-col">
+<div class="event-card coffee">
+<span class="event-icon">☕</span>
+<div>
+<p class="event-title">
+Coffee Break
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">11:00 – 12:00</span></p>
+</div>
+<div class="content-col">
+<p class="session-title">
+Session 2: Sectoral Platforms and Price Matching
+</p>
+<div class="talk-list">
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Rhys Williams</span> (<span class="affiliation">University of Cambridge</span>) <span class="talk-time">11:00 – 11:30</span></p>
+</div>
+<div class="talk-title">
+<p>Never Knowingly Undersold: Do Price Match Guarantees Result in Lower Prices?</p>
+</div>
+</div>
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Anna Rita Bennato</span> (<span class="affiliation">Loughborough University</span>) <span class="talk-time">11:30 – 12:00</span></p>
+</div>
+<div class="talk-title">
+<p>Local Energy for Sale: Pricing and Participation on Energy Trading Platform</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">12:00 – 13:30</span></p>
+</div>
+<div class="content-col">
+<div class="event-card lunch">
+<span class="event-icon">🍽️</span>
+<div>
+<p class="event-title">
+Lunch Break
+</p>
+<p class="event-desc">
+Blandfords, <a href="https://www.google.com/maps/search/?api=1&amp;query=Park+House+University+of+Reading" target="_blank">Park House</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">13:30 – 13:45</span></p>
+</div>
+<div class="content-col">
+<p class="session-title">
+Policy Keynote
+</p>
+<div class="talk-list">
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Lewis McQuarrie</span> (<span class="affiliation">Digital Regulation Cooperation Forum</span>)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">13:45 – 15:15</span></p>
+</div>
+<div class="content-col">
+<p class="session-title">
+Session 3: Open Banking, Smart Data, and Price Discrimination
+</p>
+<div class="talk-list">
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Helen Weeds</span> (<span class="affiliation">Charles River Associates and Centre for Competition Policy</span>) <span class="talk-time">13:45 – 14:15</span></p>
+</div>
+<div class="talk-title">
+<p>Open Banking Payments: Promoting Competition and Innovation in Retail Payments</p>
+</div>
+</div>
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Yiquan Gu</span> (<span class="affiliation">University of Reading</span>) <span class="talk-time">14:15 – 14:45</span></p>
+</div>
+<div class="talk-title">
+<p>UK’s Smart Data Schemes</p>
+</div>
+<div class="talk-title" style="margin-top: 0.5rem;">
+<p>When Data Calls the Tune: Price Personalization and Price Leadership</p>
+</div>
+</div>
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Ioana Chioveanu</span> (<span class="affiliation">Nottingham University Business School</span>) <span class="talk-time">14:45 – 15:15</span></p>
+</div>
+<div class="talk-title">
+<p>Price Discrimination Under Asymmetric Access to Consumer Data</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">15:15 – 15:45</span></p>
+</div>
+<div class="content-col">
+<div class="event-card coffee">
+<span class="event-icon">☕</span>
+<div>
+<p class="event-title">
+Coffee Break
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">15:45 – 17:15</span></p>
+</div>
+<div class="content-col">
+<p class="session-title">
+Session 4: Retail Coordination, Platform Services, and Encroachment
+</p>
+<div class="talk-list">
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Nicolas de Roos</span> (<span class="affiliation">University of Liverpool</span>) <span class="talk-time">15:45 – 16:15</span></p>
+</div>
+<div class="talk-title">
+<p>Negotiating Coordination: A Study in Retail Gasoline</p>
+</div>
+</div>
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Shiva Shekhar</span> (<span class="affiliation">Tilburg University</span>) <span class="talk-time">16:15 – 16:45</span></p>
+</div>
+<div class="talk-title">
+<p>Data Regulation, Platform Encroachment, and the Matthew Effect</p>
+</div>
+</div>
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Greg Taylor</span> (<span class="affiliation">University of Oxford</span>) <span class="talk-time">16:45 – 17:15</span></p>
+</div>
+<div class="talk-title">
+<p>Seller-Side Tying of Platform Services</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">17:30</span></p>
+</div>
+<div class="content-col">
+<div class="event-card dinner">
+<span class="event-icon">🥤</span>
+<div>
+<p class="event-title">
+Drinks Reception
+</p>
+<p class="event-desc">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Park+House+University+of+Reading" target="_blank">Park House</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">19:30</span></p>
+</div>
+<div class="content-col">
+<div class="event-card dinner">
+<span class="event-icon">🍽️</span>
+<div>
+<p class="event-title">
+Workshop Dinner
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">08:30 – 09:00</span></p>
+</div>
+<div class="content-col">
+<div class="event-card coffee">
+<span class="event-icon">☕</span>
+<div>
+<p class="event-title">
+Coffee and Registration
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">09:00 – 10:30</span></p>
+</div>
+<div class="content-col">
+<p class="session-title">
+Session 5: Data infrastructure, Health, and Privacy
+</p>
+<div class="talk-list">
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Luca Sandrini</span> (<span class="affiliation">University of Padova and ZEW Mannheim</span>) <span class="talk-time">09:00 – 09:30</span></p>
+</div>
+<div class="talk-title">
+<p>Agglomeration and Strategic Congestion in Data Centers</p>
+</div>
+</div>
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Burkhard Hehenkamp</span> (<span class="affiliation">Paderborn University</span>) <span class="talk-time">09:30 – 10:00</span></p>
+</div>
+<div class="talk-title">
+<p>Sustainable hospital regulation: On the welfare implications of digital treatments</p>
+</div>
+</div>
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Stefano Colombo</span> (<span class="affiliation">Università Cattolica del Sacro Cuore</span>) <span class="talk-time">10:00 – 10:30</span></p>
+</div>
+<div class="talk-title">
+<p>Strategic anonymity and behavior-based pricing</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">10:30 – 11:00</span></p>
+</div>
+<div class="content-col">
+<div class="event-card coffee">
+<span class="event-icon">☕</span>
+<div>
+<p class="event-title">
+Coffee Break
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">11:00 – 12:00</span></p>
+</div>
+<div class="content-col">
+<p class="session-title">
+Keynote
+</p>
+<div class="talk-list">
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Andrew Rhodes</span> (<span class="affiliation">TSE</span>) <span class="talk-time">11:00 – 12:00</span></p>
+</div>
+<div class="talk-title">
+<p>Digital Ecosystems and Data Regulation</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">12:00 – 13:15</span></p>
+</div>
+<div class="content-col">
+<div class="event-card lunch">
+<span class="event-icon">🍽️</span>
+<div>
+<p class="event-title">
+Lunch Break
+</p>
+<p class="event-desc">
+HBS Foyer
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">13:15 – 14:45</span></p>
+</div>
+<div class="content-col">
+<p class="session-title">
+Session 6: Algorithms, Steering, and Data Markets
+</p>
+<div class="talk-list">
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Subhasish Modak Chowdhury</span> (<span class="affiliation">University of Sheffield</span>) <span class="talk-time">13:15 – 13:45</span></p>
+</div>
+<div class="talk-title">
+<p>Default Search Engine Settings and Consumer Switch Behaviour: Results from a Field Experiment</p>
+</div>
+</div>
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Muxin Li</span> (<span class="affiliation">Fudan University</span>) <span class="talk-time">13:45 – 14:15</span></p>
+</div>
+<div class="talk-title">
+<p>Demand Steering and Market Selection: Vertical Contracts and Algorithmic Allocation</p>
+</div>
+</div>
+<div class="talk-item">
+<div class="talk-meta">
+<p><span class="speaker">Tobias Wenzel</span> (<span class="affiliation">DICE</span>) <span class="talk-time">14:15 – 14:45</span></p>
+</div>
+<div class="talk-title">
+<p>Mandating privacy spillovers: Interoperability in data markets</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">14:45</span></p>
+</div>
+<div class="content-col">
+<div class="event-card">
+<span class="event-icon">🗣️</span>
+<div>
+<p class="event-title">
+Concluding Thanks
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="schedule-item">
+<div class="time-col">
+<p><span class="time-badge">15:00</span></p>
+</div>
+<div class="content-col">
+<div class="event-card coffee">
+<span class="event-icon">🥤</span>
+<div>
+<p class="event-title">
+Post-workshop Drinks
+</p>
+<p class="event-desc">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Park+House+University+of+Reading" target="_blank">Park House</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

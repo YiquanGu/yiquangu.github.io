@@ -12,6 +12,7 @@ format:
       dark: solar
     toc: false
     from: markdown+emoji
+    # css: style.css 
 
 
 website:
@@ -30,6 +31,8 @@ website:
       - publications.qmd
       - projects.qmd
       - cv.qmd
+      - text: "RWDCR"        
+        href: programme.qmd
 
 
 
