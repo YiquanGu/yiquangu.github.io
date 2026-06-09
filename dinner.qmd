@@ -1,0 +1,683 @@
+---
+title: "Dinner Reservation"
+format:
+  html:
+    toc: false
+---
+
+```{=html}
+<style>
+  .dinner-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  .dinner-intro h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: #2c2c2c;
+  }
+  .dinner-intro .pricing-badge {
+    display: inline-block;
+    background: #f5efe0;
+    border: 1px solid #d4b86a;
+    border-radius: 20px;
+    padding: 0.35rem 1.1rem;
+    font-size: 0.9rem;
+    color: #6b4f0e;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .dinner-intro p {
+    font-size: 0.95rem;
+  }
+  .dish-extra {
+    font-size: 0.78rem;
+    color: #999;
+    font-style: italic;
+    margin-top: 2px;
+  }
+  .tag-gfo { background: #fff3e0; color: #e65100; }
+  .course-section {
+    background: #fafafa;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .course-section h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8b6914;
+    border-bottom: 1px solid #e8e0d4;
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.1rem;
+  }
+  .dish-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.55rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .dish-option:hover {
+    background: #f0e8d8;
+  }
+  .dish-option input[type="radio"] {
+    margin-top: 3px;
+    flex-shrink: 0;
+    accent-color: #8b6914;
+    width: 16px;
+    height: 16px;
+  }
+  .dish-label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .dish-name {
+    font-weight: 500;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+  }
+  .dish-desc {
+    font-size: 0.82rem;
+    color: #777;
+    margin-top: 1px;
+  }
+  .dish-price {
+    font-size: 0.85rem;
+    color: #8b6914;
+    font-weight: 500;
+    white-space: nowrap;
+    margin-top: 2px;
+  }
+  .dish-tags {
+    display: inline-flex;
+    gap: 4px;
+    margin-top: 3px;
+  }
+  .tag {
+    font-size: 0.68rem;
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+  .tag-v  { background: #e8f5e9; color: #2e7d32; }
+  .tag-vg { background: #e0f2f1; color: #00695c; }
+  .tag-gf { background: #fff8e1; color: #f57f17; }
+  .guest-field {
+    margin-bottom: 1.5rem;
+  }
+  .guest-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #2c2c2c;
+  }
+  .guest-field input,
+  .guest-field textarea {
+    width: 100%;
+    max-width: 420px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+  .guest-field textarea {
+    max-width: 100%;
+    resize: vertical;
+  }
+  .submit-btn {
+    background: #8b6914;
+    color: #fff;
+    border: none;
+    padding: 0.65rem 2.2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .submit-btn:hover {
+    background: #6b4f0e;
+  }
+  .formspree-note {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 1rem;
+  }
+  .required-note {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 1rem;
+  }
+  .order-mode-box {
+    background: #f8f5ec;
+    border: 1px solid #e3d9c2;
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .order-mode-box label {
+    display: block;
+    margin-top: 0.35rem;
+    cursor: pointer;
+  }
+  .hidden {
+    display: none;
+  }
+  .main-menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .main-menu-grid > div {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-menu-grid label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .main-menu-grid select {
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background: #fff;
+    font-family: inherit;
+  }
+  .main-menu-total {
+    margin-top: 0.8rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #d4b86a;
+    border-radius: 4px;
+    background: #fff8e8;
+    color: #6b4f0e;
+    font-weight: 600;
+  }
+  .main-menu-warning {
+    color: #b00020;
+    font-size: 0.84rem;
+    margin-top: 0.4rem;
+    display: none;
+  }
+  .set-menu-warning {
+    color: #b00020;
+    font-size: 0.84rem;
+    margin-top: 0.4rem;
+    display: none;
+  }
+</style>
+
+<div class="dinner-intro">
+  <h2><a href="https://www.google.com/maps/search/?api=1&query=C%C3%B4te+Brasserie+Reading" target="_blank" rel="noopener">Côte Brasserie</a>, 19:00 June 12th</h2>
+  <div class="pricing-badge"><a href="https://www.cote.co.uk/restaurant/reading/menus?menucode=set-menu" target="_blank" rel="noopener">Set Menu</a> &nbsp;|&nbsp; 2 courses £23 (+ £8 steak upgrade available) &nbsp;/&nbsp; 3 courses £27 <br><a href="https://www.cote.co.uk/restaurant/reading/menus?menucode=main-menu" target="_blank" rel="noopener">Main Menu</a> &nbsp;|&nbsp; individually priced</div>
+  <p>Select either the Set Menu (2 or 3 courses), or choose Main Menu dishes with a cap of £31.</p>
+</div>
+
+<form id="dinner-order-form"
+      action="https://formspree.io/f/mnjyvrpp"
+      method="POST">
+
+  <p class="required-note">Fields marked <span style="color:#c0392b">*</span> are required.</p>
+
+  <!-- Guest details -->
+  <div class="guest-field">
+    <label for="guest-name">Your Name <span style="color:#c0392b">*</span></label>
+    <input type="text" id="guest-name" name="01_guest_name" required placeholder="e.g. Jane Smith">
+  </div>
+
+  <div class="guest-field">
+    <label for="guest-email">Email Address <span style="color:#c0392b">*</span></label>
+    <input type="email" id="guest-email" name="02_guest_email" required placeholder="for order confirmation">
+  </div>
+
+  <div class="order-mode-box">
+    <strong>Order Type <span style="color:#c0392b">*</span></strong>
+    <label>
+      <input type="radio" name="03_order_type" value="Set Menu" checked>
+      Set Menu (3 courses, or 2 courses with or without steak upgrade)
+    </label>
+    <label>
+      <input type="radio" name="03_order_type" value="Main Menu (total is capped to £31)">
+      Main Menu option (total capped at £31)
+    </label>
+  </div>
+
+  <div id="set-menu-fields">
+
+  <!-- STARTER -->
+  <div class="course-section">
+    <h3>Starter</h3>
+
+    <label class="dish-option">
+      <input type="radio" name="04_starter" value="French Onion Soup">
+      <span class="dish-label">
+        <span class="dish-name">French Onion Soup</span>
+        <span class="dish-desc">Our original recipe, topped with Comté rarebit sourdough baguette</span>
+        <span class="dish-tags"><span class="tag tag-gfo">GFO</span></span>
+      </span>
+    </label>
+
+    <label class="dish-option">
+      <input type="radio" name="04_starter" value="Potted Crab">
+      <span class="dish-label">
+        <span class="dish-name">Potted Crab</span>
+        <span class="dish-desc">Lobster butter, seeded sourdough</span>
+        <span class="dish-tags"><span class="tag tag-gfo">GFO</span></span>
+      </span>
+    </label>
+
+    <label class="dish-option">
+      <input type="radio" name="04_starter" value="Warm Beetroot Salad">
+      <span class="dish-label">
+        <span class="dish-name">Warm Beetroot Salad</span>
+        <span class="dish-desc">Beetroot &amp; almond romesco, apple, seeded sourdough</span>
+        <span class="dish-tags"><span class="tag tag-v">V</span></span>
+      </span>
+    </label>
+
+    <label class="dish-option">
+      <input type="radio" name="04_starter" value="Charcuterie">
+      <span class="dish-label">
+        <span class="dish-name">Charcuterie</span>
+        <span class="dish-desc">Truffle saucisson, Savoie ham, celeriac remoulade, pickles, seeded sourdough</span>
+        <span class="dish-tags"><span class="tag tag-gfo">GFO</span></span>
+      </span>
+    </label>
+
+    <label class="dish-option">
+      <input type="radio" name="04_starter" value="skip-starter">
+      <span class="dish-label">
+        <span class="dish-name">Skip this course</span>
+      </span>
+    </label>
+  </div>
+  <!-- MAIN -->
+  <div class="course-section">
+    <h3>Main Course</h3>
+
+    <label class="dish-option">
+      <input type="radio" name="05_main" value="Grilled Sea Bream">
+      <span class="dish-label">
+        <span class="dish-name">Grilled Sea Bream</span>
+        <span class="dish-desc">Sun-dried tomato butter, olive salsa vierge, sautéed tarragon new potatoes</span>
+        <span class="dish-tags"><span class="tag tag-gf">GF</span></span>
+      </span>
+    </label>
+
+    <label class="dish-option">
+      <input type="radio" name="05_main" value="Shredded Chicken Salad">
+      <span class="dish-label">
+        <span class="dish-name">Shredded Chicken Salad</span>
+        <span class="dish-desc">Crisp lettuce, endive, grapes, toasted hazelnuts, celeriac remoulade, mustard dressing</span>
+        <span class="dish-tags"><span class="tag tag-gfo">GFO</span></span>
+      </span>
+    </label>
+
+    <label class="dish-option">
+      <input type="radio" name="05_main" value="Pistou Gnocchi">
+      <span class="dish-label">
+        <span class="dish-name">Pistou Gnocchi</span>
+        <span class="dish-desc">French beans, cream, pine nuts, cherry tomatoes (VG option available)</span>
+        <span class="dish-tags"><span class="tag tag-v">V</span> <span class="tag tag-gf">GF</span></span>
+      </span>
+    </label>
+
+    <label class="dish-option">
+      <input type="radio" name="05_main" value="Steak Frites" id="main-steak" onchange="updateSetMenuTotal(); document.getElementById('steak-upgrade-box').style.display='block'">
+      <span class="dish-label">
+        <span class="dish-name">Steak Frites</span>
+        <span class="dish-desc">Prepared in our Côte butchery, 30-day-aged, grass-fed and gloriously rich in flavour, with free-flow frites</span>
+        <span class="dish-tags"><span class="tag tag-gf">GF</span></span>
+      </span>
+    </label>
+    <div id="steak-upgrade-box" style="display:none; margin: 0.25rem 0 0.5rem 2.5rem; padding: 0.6rem 0.8rem; background:#fff8e8; border:1px solid #d4b86a; border-radius:4px; font-size:0.88rem;">
+      <strong>Upgrade your cut?</strong>
+      <label style="display:block; margin-top:0.4rem; cursor:pointer;">
+        <input type="radio" name="06_steak_upgrade" value="No upgrade – standard Steak Frites" checked> Standard Steak Frites (included)
+      </label>
+      <label style="display:block; margin-top:0.3rem; cursor:pointer;">
+        <input type="radio" name="06_steak_upgrade" value="Upgrade to 8oz sirloin +£8"> Upgrade to 8oz sirloin <strong>+£8</strong>
+      </label>
+    </div>
+  </div>
+
+  <!-- DESSERT -->
+  <div class="course-section">
+    <h3>Dessert</h3>
+
+    <label class="dish-option">
+      <input type="radio" name="07_dessert" value="Chocolate Praline Tart">
+      <span class="dish-label">
+        <span class="dish-name">Chocolate Praline Tart</span>
+        <span class="dish-desc">Berry coulis, vanilla ice cream</span>
+        <span class="dish-tags"><span class="tag tag-vg">VG</span> <span class="tag tag-v">V</span></span>
+      </span>
+    </label>
+
+    <label class="dish-option">
+      <input type="radio" name="07_dessert" value="Pistachio Crème Brûlée">
+      <span class="dish-label">
+        <span class="dish-name">Pistachio Crème Brûlée</span>
+        <span class="dish-desc">A burnt French custard, pistachio crumb</span>
+        <span class="dish-tags"><span class="tag tag-v">V</span> <span class="tag tag-gf">GF</span></span>
+      </span>
+    </label>
+
+    <label class="dish-option">
+      <input type="radio" name="07_dessert" value="Ice Cream Duo">
+      <span class="dish-label">
+        <span class="dish-name">Ice Cream Duo</span>
+        <span class="dish-desc">Two scoops of vanilla, chocolate or salted caramel ice cream; lemon or raspberry sorbet (VG option available)</span>
+        <span class="dish-tags"><span class="tag tag-v">V</span> <span class="tag tag-gfo">GFO</span></span>
+      </span>
+    </label>
+
+    <label class="dish-option">
+      <input type="radio" name="07_dessert" value="Cheese Plate">
+      <span class="dish-label">
+        <span class="dish-name">Cheese Plate</span>
+        <span class="dish-desc">Three cheeses, quince jelly, charcoal crackers. Choose from: Cantal / Brie aux Truffes / Roquefort / Délice de Bourgogne / Chèvre Buchette / Camembert</span>
+      </span>
+    </label>
+
+    <label class="dish-option">
+      <input type="radio" name="07_dessert" value="skip-dessert">
+      <span class="dish-label">
+        <span class="dish-name">Skip this course</span>
+      </span>
+    </label>
+  </div>
+
+  <div class="main-menu-total">Set Menu total (<span id="course-count">3</span> courses): <span id="set-menu-total-value">£27.00</span></div>
+  <p class="set-menu-warning" id="set-menu-warning">Set Menu orders must total <= £31.00 (including any steak upgrade).</p>
+  <input type="hidden" id="set-menu-total-hidden" name="08_set_menu_total" value="27.00">
+
+  </div>
+
+  <div id="main-menu-fields" class="hidden">
+    <div class="course-section">
+      <h3>Main Menu Selection (Total <= £31)</h3>
+      <div class="main-menu-grid">
+        <div>
+          <label for="mm-starter"><strong>Starter</strong></label>
+          <select id="mm-starter" name="09_main_menu_starter">
+            <option value="">No starter</option>
+            <option value="Olives" data-price="5">Olives (£5.00) V VG GF</option>
+            <option value="Baguette" data-price="3">Baguette (£3.00) V</option>
+            <option value="Charcuterie" data-price="8">Charcuterie (£8.00) GFO</option>
+            <option value="Cheesy French Onion Fougasse" data-price="7.5">Cheesy French Onion Fougasse (£7.50) V available</option>
+            <option value="Fougasse" data-price="7.5">Fougasse (£7.50) V</option>
+            <option value="Chicken Liver Parfait" data-price="10">Chicken Liver Parfait (£10.00) GFO</option>
+            <option value="French Onion Soup" data-price="9">French Onion Soup (£9.00) GFO</option>
+            <option value="Twice-Baked Souffle" data-price="10.5">Twice-Baked Souffle (£10.50) V GF</option>
+            <option value="Calamari" data-price="10">Calamari (£10.00)</option>
+            <option value="King Prawns" data-price="10">King Prawns (£10.00) GFO </option>
+            <option value="Warm Beetroot Salad" data-price="9">Warm Beetroot Salad (£9.00) V</option>
+            <option value="Potted Crab" data-price="11">Potted Crab (£11.00) GFO</option>
+            <option value="Sauteed Scallops" data-price="13.5">Sauteed Scallops (£13.50) GFO</option>
+          </select>
+        </div>
+        <div>
+          <label for="mm-main"><strong>Main</strong></label>
+          <select id="mm-main" name="10_main_menu_main">
+            <option value="">No main</option>
+            <option value="Beef Bourguignon" data-price="24">Beef Bourguignon (£24.00) GF </option>
+            <option value="Steak Frites" data-price="19">Steak Frites (£19.00) GF</option>
+            <option value="Grilled Sea Bream" data-price="18">Grilled Sea Bream (£18.00) GF</option>
+            <option value="Confit Pork Belly" data-price="21">Confit Pork Belly (£21.00) GF</option>
+            <option value="Cote Burger" data-price="17.5">Cote Burger (£17.50) </option>
+            <option value="Moules Mariniere" data-price="17.5">Moules Mariniere (£17.50) GF </option>
+            <option value="Salmon Bearnaise" data-price="20.5">Salmon Bearnaise (£20.50) GF</option>
+            <option value="Lamb Ragu" data-price="19">Lamb Ragu (£19.00)</option>
+            <option value="Seafood Linguine" data-price="19.5">Seafood Linguine (£19.50)</option>
+            <option value="Pistou Gnocchi" data-price="16.5">Pistou Gnocchi (£16.50) V GF</option>
+            <option value="Tarte Tatin" data-price="17">Tarte Tatin (£17.00) V</option>
+            <option value="Vegan Fable Burger" data-price="17.5">Vegan Fable Burger (£17.50) VG V</option>
+            <option value="Salad Nicoise" data-price="18.5">Salad Nicoise (£18.50) GF</option>
+            <option value="Shredded Chicken Salad" data-price="18">Shredded Chicken Salad (£18.00) GFO</option>
+            <option value="Sirloin Steak Baguette" data-price="18">Sirloin Steak Baguette (£18.00)</option>
+            <option value="French Onion Baguette" data-price="15.5">French Onion Baguette (£15.50) V</option>
+            <option value="Whole Roast Chicken & Frites" data-price="40">Whole Roast Chicken & Frites (£40.00) GF</option>
+            <option value="Half Roast Chicken" data-price="22">Half Roast Chicken (£22.00) GF</option>
+            <option value="Fillet (8oz)" data-price="39">Fillet (8oz) (£39.00) GF</option>
+            <option value="Ribeye (10oz)" data-price="33">Ribeye (10oz) (£33.00) GF</option>
+            <option value="Sirloin (8oz)" data-price="29">Sirloin (8oz) (£29.00) GF</option>
+            <option value="Tempeh" data-price="16.5">Tempeh (£16.50) V VG GF</option>
+          </select>
+        </div>
+        <div>
+          <label for="mm-dessert"><strong>Dessert </strong></label>
+          <select id="mm-dessert" name="11_main_menu_dessert">
+            <option value="">No dessert</option>
+            <option value="Grand Chocolate Mousse (for one)" data-price="9.3">Grand Chocolate Mousse (for one) (£9.30) V</option>
+            <option value="Pistachio Creme Brulee" data-price="9">Pistachio Creme Brulee (£9.00) V GF</option>
+            <option value="Creme Caramel" data-price="9">Creme Caramel (£9.00) V GF</option>
+            <option value="Warm Chocolate Fondant" data-price="9">Warm Chocolate Fondant (£9.00) V</option>
+            <option value="Chocolate Praline Tart" data-price="9">Chocolate Praline Tart (£9.00) VG V</option>
+            <option value="Tarte au Citron" data-price="9">Tarte au Citron (£9.00) V</option>
+            <option value="Ice Cream Duo" data-price="7">Ice Cream Duo (£7.00) V GFO</option>
+            <option value="Cafe Gourmand" data-price="9.5">Cafe Gourmand (£9.50) V</option>
+            <option value="Madeleines" data-price="7">Madeleines (£7.00) V</option>
+            <option value="Caneles" data-price="5">Caneles (£5.00) V</option>
+            <option value="GF Cheese Plate" data-price="11.5">GF Cheese Plate (£11.50)  GFO</option>
+          </select>
+        </div>
+        <div>
+          <label for="mm-side"><strong>Side</strong></label>
+          <select id="mm-side" name="12_main_menu_side">
+            <option value="">No side</option>
+            <option value="Green Salad" data-price="5.5">Green Salad (£5.50) V VG GF</option>
+            <option value="Spinach" data-price="5.5">Spinach (£5.50) V GF</option>
+            <option value="Free-Flow Frites" data-price="5.5">Free-Flow Frites (£5.50) V VG GF</option>
+            <option value="Thick-cut Chips" data-price="5.5">Thick-cut Chips (£5.50) V GF</option>
+            <option value="Tenderstem Broccoli" data-price="5.5">Tenderstem Broccoli (£5.50) V VG GF</option>
+            <option value="Tomato & Basil Salad" data-price="5.5">Tomato & Basil Salad (£5.50) V VG GF</option>
+            <option value="Gratin Dauphinois" data-price="5.5">Gratin Dauphinois (£5.50) V GF</option>
+            <option value="Gratin Mushrooms" data-price="5.5">Gratin Mushrooms (£5.50) V</option>
+          </select>
+        </div>
+        <div>
+          <label for="mm-sauce"><strong>Sauce</strong></label>
+          <select id="mm-sauce" name="13_main_menu_sauce">
+            <option value="">No sauce</option>
+            <option value="Cote Gravy" data-price="2.5">Cote Gravy (£2.50) VG V GF</option>
+            <option value="Sun-Dried Tomato" data-price="1.5">Sun-Dried Tomato (£1.50) V GF</option>
+            <option value="Cafe de Paris Butter" data-price="1.5">Cafe de Paris Butter (£1.50) GF</option>
+            <option value="Wild Mushroom" data-price="2.5">Wild Mushroom (£2.50) V GF</option>
+            <option value="Peppercorn" data-price="2.5">Peppercorn (£2.50) GF</option>
+            <option value="Bearnaise" data-price="2.5">Bearnaise (£2.50) V GF</option>
+            <option value="Garlic Butter" data-price="1.5">Garlic Butter (£1.50) V GF</option>
+          </select>
+        </div>
+      </div>
+      <div class="main-menu-total">Main Menu total: <span id="main-menu-total-value">£0.00</span></div>
+      <p class="main-menu-warning" id="main-menu-warning">Main Menu orders must total <= £31.00.</p>
+      <input type="hidden" id="main-menu-total-hidden" name="14_main_menu_total" value="0">
+    </div>
+  </div>
+
+  <!-- NOTES -->
+  <div class="guest-field">
+    <label for="notes">Dietary requirements or notes (we will pass this information to the restaurant)</label>
+    <textarea id="notes" name="15_notes" rows="3" placeholder="e.g. nut allergy, dairy-free,other dietary needs, and/or how you like your food prepared"></textarea>
+  </div>
+
+  <button type="submit" class="submit-btn">Submit Order</button>
+
+<script>
+  function updateSetMenuTotal() {
+    var starter = document.querySelector('input[name="04_starter"]:checked');
+    var main = document.querySelector('input[name="05_main"]:checked');
+    var dessert = document.querySelector('input[name="07_dessert"]:checked');
+    var courseCount = 0;
+    var basePrice = 0;
+    if (starter && starter.value !== 'skip-starter') courseCount++;
+    if (main && main.value !== 'skip-main') courseCount++;
+    if (dessert && dessert.value !== 'skip-dessert') courseCount++;
+    if (courseCount === 2) basePrice = 23;
+    else if (courseCount === 3) basePrice = 27;
+    var total = basePrice;
+    var chosenUpgrade = document.querySelector('input[name="06_steak_upgrade"]:checked');
+    if (main && main.value === 'Steak Frites' && chosenUpgrade && chosenUpgrade.value.indexOf('Upgrade to 8oz sirloin') === 0) {
+      total += 8;
+    }
+    document.getElementById('set-menu-total-value').textContent = '£' + total.toFixed(2);
+    document.getElementById('set-menu-total-hidden').value = total.toFixed(2);
+    document.getElementById('course-count').textContent = courseCount;
+    document.getElementById('set-menu-warning').style.display = total > 31 ? 'block' : 'none';
+    return { total: total, courseCount: courseCount };
+  }
+
+  function updateMainMenuTotal() {
+    var selects = ['mm-starter', 'mm-main', 'mm-dessert', 'mm-side', 'mm-sauce'];
+    var total = 0;
+    var chosenCount = 0;
+    selects.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var opt = el.options[el.selectedIndex];
+      var price = parseFloat(opt.getAttribute('data-price') || '0');
+      if (opt.value) {
+        chosenCount += 1;
+      }
+      total += price;
+    });
+    document.getElementById('main-menu-total-value').textContent = '£' + total.toFixed(2);
+    document.getElementById('main-menu-total-hidden').value = total.toFixed(2);
+    document.getElementById('main-menu-warning').style.display = total > 31 ? 'block' : 'none';
+    return { total: total, chosenCount: chosenCount };
+  }
+
+  function switchOrderMode() {
+    var mode = document.querySelector('input[name="03_order_type"]:checked').value;
+    var isMainMenu = mode.indexOf('Main Menu') === 0;
+    var setFields = document.getElementById('set-menu-fields');
+    var mainFields = document.getElementById('main-menu-fields');
+
+    setFields.classList.toggle('hidden', isMainMenu);
+    mainFields.classList.toggle('hidden', !isMainMenu);
+
+    document.querySelectorAll('input[name="04_starter"], input[name="05_main"], input[name="07_dessert"], input[name="06_steak_upgrade"]').forEach(function(el) {
+      el.disabled = isMainMenu;
+      if (isMainMenu) {
+        el.checked = false;
+      }
+    });
+
+    document.querySelectorAll('#mm-starter, #mm-main, #mm-dessert, #mm-side, #mm-sauce').forEach(function(el) {
+      el.disabled = !isMainMenu;
+      if (!isMainMenu) {
+        el.selectedIndex = 0;
+      }
+    });
+
+    if (!isMainMenu) {
+      document.querySelector('input[name="06_steak_upgrade"][value^="No upgrade"]').checked = true;
+    }
+
+    if (!isMainMenu) {
+      document.getElementById('main-menu-warning').style.display = 'none';
+      document.getElementById('main-menu-total-value').textContent = '£0.00';
+      document.getElementById('main-menu-total-hidden').value = '0';
+      updateSetMenuTotal();
+    } else {
+      document.getElementById('set-menu-warning').style.display = 'none';
+      updateMainMenuTotal();
+    }
+  }
+
+  // Hide steak upgrade box when a different main is chosen
+  document.querySelectorAll('input[name="05_main"]').forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      var box = document.getElementById('steak-upgrade-box');
+      if (this.value === 'Steak Frites') {
+        box.style.display = 'block';
+      } else {
+        box.style.display = 'none';
+        document.querySelectorAll('input[name="06_steak_upgrade"]').forEach(function(r) {
+          r.checked = r.value.startsWith('No');
+        });
+      }
+      updateSetMenuTotal();
+    });
+  });
+
+  document.querySelectorAll('input[name="04_starter"], input[name="07_dessert"]').forEach(function(radio) {
+    radio.addEventListener('change', updateSetMenuTotal);
+  });
+
+  document.querySelectorAll('input[name="06_steak_upgrade"]').forEach(function(radio) {
+    radio.addEventListener('change', updateSetMenuTotal);
+  });
+
+  document.querySelectorAll('input[name="03_order_type"]').forEach(function(radio) {
+    radio.addEventListener('change', switchOrderMode);
+  });
+
+  document.querySelectorAll('#mm-starter, #mm-main, #mm-dessert, #mm-side, #mm-sauce').forEach(function(el) {
+    el.addEventListener('change', updateMainMenuTotal);
+  });
+
+  document.getElementById('dinner-order-form').addEventListener('submit', function(e) {
+    var mode = document.querySelector('input[name="03_order_type"]:checked').value;
+    if (mode.indexOf('Main Menu') === 0) {
+      var summary = updateMainMenuTotal();
+      if (summary.chosenCount === 0) {
+        e.preventDefault();
+        alert('Please choose at least one Main Menu dish.');
+        return;
+      }
+      if (summary.total > 31) {
+        e.preventDefault();
+        alert('Main Menu total must be <= £31.00.');
+      }
+    } else {
+      var summary = updateSetMenuTotal();
+      if (summary.courseCount < 2 || summary.courseCount > 3) {
+        e.preventDefault();
+        alert('Please select exactly 2 or 3 courses.');
+        return;
+      }
+      if (summary.total > 31) {
+        e.preventDefault();
+        alert('Set Menu total must be <= £31.00, including any steak upgrade.');
+      }
+    }
+  });
+
+  updateSetMenuTotal();
+  switchOrderMode();
+</script>
+
+  <p class="formspree-note">
+    Your order will be sent by email. Menu is sourced from the
+    <a href="https://www.cote.co.uk/restaurant/reading/menus?menucode=set-menu" target="_blank" rel="noopener">
+      Côte Brasserie Reading Set Menu
+    </a>
+    and
+    <a href="https://www.cote.co.uk/restaurant/reading/menus?menucode=main-menu" target="_blank" rel="noopener">
+      Côte Brasserie Reading Main Menu
+    </a>.
+    <br>
+    <strong>V</strong> = Vegetarian &nbsp;|&nbsp;
+    <strong>VG</strong> = Vegan &nbsp;|&nbsp;
+    <strong>GF</strong> = Gluten Free &nbsp;|&nbsp;
+    <strong>GFO</strong> = Gluten Free Option available
+  </p>
+</form>
+```
