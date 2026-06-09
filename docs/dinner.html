@@ -714,7 +714,7 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
   </div>
 
   <div class="main-menu-total">Set Menu total (<span id="course-count">3</span> courses): <span id="set-menu-total-value">£27.00</span></div>
-  <p class="set-menu-warning" id="set-menu-warning">Set Menu orders must total &lt;= £31.00 (including any steak upgrade).</p>
+  <p class="set-menu-warning" id="set-menu-warning">Total is capped at £31.00 (including any steak upgrade).</p>
   <input type="hidden" id="set-menu-total-hidden" name="08_set_menu_total" value="27.00">
 
   </div>
@@ -816,7 +816,7 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
         </div>
       </div>
       <div class="main-menu-total">Main Menu total: <span id="main-menu-total-value">£0.00</span></div>
-      <p class="main-menu-warning" id="main-menu-warning">Main Menu orders must total &lt;= £31.00.</p>
+      <p class="main-menu-warning" id="main-menu-warning">Total is capped at £31.00.</p>
       <input type="hidden" id="main-menu-total-hidden" name="14_main_menu_total" value="0">
     </div>
   </div>
@@ -954,7 +954,7 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
       }
       if (summary.total > 31) {
         e.preventDefault();
-        alert('Main Menu total must be <= £31.00.');
+        alert('Main Menu total <= £31.00.');
       }
     } else {
       var summary = updateSetMenuTotal();
@@ -965,7 +965,7 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
       }
       if (summary.total > 31) {
         e.preventDefault();
-        alert('Set Menu total must be <= £31.00, including any steak upgrade.');
+        alert('Set Menu total <= £31.00, including any steak upgrade.');
       }
     }
   });
