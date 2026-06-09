@@ -225,7 +225,7 @@ format:
 <div class="dinner-intro">
   <h2><a href="https://www.google.com/maps/search/?api=1&query=C%C3%B4te+Brasserie+Reading" target="_blank" rel="noopener">Côte Brasserie</a>, 19:00 June 12th</h2>
   <div class="pricing-badge"><a href="https://www.cote.co.uk/restaurant/reading/menus?menucode=set-menu" target="_blank" rel="noopener">Set Menu</a> &nbsp;|&nbsp; 2 courses £23 (+ £8 steak upgrade available) &nbsp;/&nbsp; 3 courses £27 <br><a href="https://www.cote.co.uk/restaurant/reading/menus?menucode=main-menu" target="_blank" rel="noopener">Main Menu</a> &nbsp;|&nbsp; individually priced</div>
-  <p>Select either the Set Menu (2 or 3 courses), or choose Main Menu dishes with a cap of £31.</p>
+  <p>Select either the Set Menu (2 or 3 courses), choose Main Menu dishes with a cap of £31, or mark that you are not attending dinner.</p>
 </div>
 
 <form id="dinner-order-form"
@@ -254,6 +254,10 @@ format:
     <label>
       <input type="radio" name="03_order_type" value="Main Menu (total is capped to £31)">
       Main Menu option (total capped at £31)
+    </label>
+    <label>
+      <input type="radio" name="03_order_type" value="Not attending dinner">
+      Not attending dinner
     </label>
   </div>
 
@@ -512,7 +516,7 @@ format:
   </div>
 
   <!-- NOTES -->
-  <div class="guest-field">
+  <div class="guest-field" id="notes-section">
     <label for="notes">Dietary requirements or notes (we will pass this information to the restaurant)</label>
     <textarea id="notes" name="15_notes" rows="3" placeholder="e.g. nut allergy, dairy-free,other dietary needs, and/or how you like your food prepared"></textarea>
   </div>
@@ -566,36 +570,54 @@ format:
   function switchOrderMode() {
     var mode = document.querySelector('input[name="03_order_type"]:checked').value;
     var isMainMenu = mode.indexOf('Main Menu') === 0;
+    var isNotAttending = mode === 'Not attending dinner';
     var setFields = document.getElementById('set-menu-fields');
     var mainFields = document.getElementById('main-menu-fields');
+    var notesSection = document.getElementById('notes-section');
+    var notesField = document.getElementById('notes');
 
-    setFields.classList.toggle('hidden', isMainMenu);
-    mainFields.classList.toggle('hidden', !isMainMenu);
+    setFields.classList.toggle('hidden', isMainMenu || isNotAttending);
+    mainFields.classList.toggle('hidden', !isMainMenu || isNotAttending);
+    notesSection.classList.toggle('hidden', isNotAttending);
+    notesField.disabled = isNotAttending;
+    if (isNotAttending) {
+      notesField.value = '';
+    }
 
     document.querySelectorAll('input[name="04_starter"], input[name="05_main"], input[name="07_dessert"], input[name="06_steak_upgrade"]').forEach(function(el) {
-      el.disabled = isMainMenu;
-      if (isMainMenu) {
+      el.disabled = isMainMenu || isNotAttending;
+      if (isMainMenu || isNotAttending) {
         el.checked = false;
       }
     });
 
     document.querySelectorAll('#mm-starter, #mm-main, #mm-dessert, #mm-side, #mm-sauce').forEach(function(el) {
-      el.disabled = !isMainMenu;
-      if (!isMainMenu) {
+      el.disabled = !isMainMenu || isNotAttending;
+      if (!isMainMenu || isNotAttending) {
         el.selectedIndex = 0;
       }
     });
 
-    if (!isMainMenu) {
+    if (!isMainMenu && !isNotAttending) {
       document.querySelector('input[name="06_steak_upgrade"][value^="No upgrade"]').checked = true;
     }
 
-    if (!isMainMenu) {
+    if (isNotAttending) {
+      document.getElementById('steak-upgrade-box').style.display = 'none';
+      document.getElementById('set-menu-warning').style.display = 'none';
+      document.getElementById('main-menu-warning').style.display = 'none';
+      document.getElementById('course-count').textContent = '0';
+      document.getElementById('set-menu-total-value').textContent = '£0.00';
+      document.getElementById('set-menu-total-hidden').value = '0';
+      document.getElementById('main-menu-total-value').textContent = '£0.00';
+      document.getElementById('main-menu-total-hidden').value = '0';
+    } else if (!isMainMenu) {
       document.getElementById('main-menu-warning').style.display = 'none';
       document.getElementById('main-menu-total-value').textContent = '£0.00';
       document.getElementById('main-menu-total-hidden').value = '0';
       updateSetMenuTotal();
     } else {
+      document.getElementById('steak-upgrade-box').style.display = 'none';
       document.getElementById('set-menu-warning').style.display = 'none';
       updateMainMenuTotal();
     }
@@ -635,6 +657,9 @@ format:
 
   document.getElementById('dinner-order-form').addEventListener('submit', function(e) {
     var mode = document.querySelector('input[name="03_order_type"]:checked').value;
+    if (mode === 'Not attending dinner') {
+      return;
+    }
     if (mode.indexOf('Main Menu') === 0) {
       var summary = updateMainMenuTotal();
       if (summary.chosenCount === 0) {
