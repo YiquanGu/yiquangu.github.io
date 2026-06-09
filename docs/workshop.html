@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-06-06">
+<meta name="dcterms.date" content="2026-06-09">
 
 <title>Reading Workshop on Digital Competition &amp; Regulation</title>
 <style>
@@ -317,7 +317,7 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Programme Version</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 6, 2026</p>
+      <p class="date">June 9, 2026</p>
     </div>
   </div>
   
@@ -329,96 +329,6 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
 </header>
 
 
-<div id="password-gate">
-  <div class="pw-box">
-    <h2 class="anchored">Workshop Programme</h2>
-    <p>Please enter the password to view the programme.</p>
-    <input type="password" id="pw-input" placeholder="Password" autocomplete="current-password">
-    <button onclick="checkPassword()">Enter</button>
-    <p id="pw-error" style="display:none;">Incorrect password. Please try again.</p>
-  </div>
-</div>
-
-<style>
-#password-gate {
-  position: fixed;
-  inset: 0;
-  background: rgba(255,255,255,0.97);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.pw-box {
-  text-align: center;
-  max-width: 380px;
-  width: 90%;
-  padding: 2rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-}
-.pw-box h2 { margin-bottom: 0.5rem; }
-.pw-box p  { color: #666; margin-bottom: 1.25rem; }
-#pw-input {
-  width: 100%;
-  padding: 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  margin-bottom: 0.75rem;
-  box-sizing: border-box;
-}
-.pw-box button {
-  width: 100%;
-  padding: 0.7rem;
-  background: #0d6efd;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-.pw-box button:hover { background: #0b5ed7; }
-#pw-error { color: #dc3545; margin-top: 0.6rem; }
-</style>
-
-<script>
-(function () {
-  const CORRECT_HASH = 'c63d03523c5cc4975a7d26e3b5a9caf47c5bd0aef8fea1ddefc859249382613c';
-
-  async function hash(str) {
-    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
-    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
-  }
-
-  window.checkPassword = async function () {
-    const input = document.getElementById('pw-input').value;
-    const h = await hash(input);
-    if (h === CORRECT_HASH) {
-      document.getElementById('password-gate').style.display = 'none';
-      sessionStorage.setItem('workshop-auth', CORRECT_HASH);
-    } else {
-      const err = document.getElementById('pw-error');
-      err.style.display = 'block';
-      document.getElementById('pw-input').value = '';
-      document.getElementById('pw-input').focus();
-    }
-  };
-
-  document.addEventListener('DOMContentLoaded', function () {
-    // Allow Enter key
-    document.getElementById('pw-input').addEventListener('keypress', function (e) {
-      if (e.key === 'Enter') window.checkPassword();
-    });
-    // Skip gate if already authenticated this session
-    if (sessionStorage.getItem('workshop-auth') === CORRECT_HASH) {
-      document.getElementById('password-gate').style.display = 'none';
-    }
-  });
-}());
-</script>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Day 1: Friday, June 12, 2026</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Day 2: Saturday, June 13, 2026</a></li></ul>
 <div class="tab-content">
@@ -677,7 +587,7 @@ Drinks Reception
 </div>
 <div class="schedule-item">
 <div class="time-col">
-<p><span class="time-badge">19:30</span></p>
+<p><span class="time-badge">19:00</span></p>
 </div>
 <div class="content-col">
 <div class="event-card dinner">
@@ -685,6 +595,9 @@ Drinks Reception
 <div>
 <p class="event-title">
 Workshop Dinner
+</p>
+<p class="event-desc">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Cote+Brasserie+Reading" target="_blank">Côte Reading</a>
 </p>
 </div>
 </div>
