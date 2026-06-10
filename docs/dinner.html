@@ -319,25 +319,53 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
 
 
 <style>
+  :root {
+    --dinner-text: #2c2c2c;
+    --dinner-muted: #6f6a5f;
+    --dinner-panel: #faf7f0;
+    --dinner-panel-strong: #f5efe0;
+    --dinner-border: #e3d7bf;
+    --dinner-accent: #8b6914;
+    --dinner-accent-strong: #6b4f0e;
+    --dinner-hover: #efe4cf;
+    --dinner-input-bg: #fffdf8;
+    --dinner-warning: #b00020;
+  }
+  body.quarto-dark {
+    --dinner-text: #f0e7d4;
+    --dinner-muted: #b6ac95;
+    --dinner-panel: #12333d;
+    --dinner-panel-strong: #1a4450;
+    --dinner-border: #40606b;
+    --dinner-accent: #d8b04c;
+    --dinner-accent-strong: #efc96a;
+    --dinner-hover: #204a56;
+    --dinner-input-bg: #0f2d36;
+    --dinner-warning: #ff8f8f;
+  }
   .dinner-intro {
     text-align: center;
     margin-bottom: 2rem;
-    color: #555;
+    color: var(--dinner-muted);
   }
   .dinner-intro h2 {
     font-size: 1.4rem;
     font-weight: 400;
     letter-spacing: 0.05em;
-    color: #2c2c2c;
+    color: var(--dinner-text);
+  }
+  .dinner-intro a {
+    color: var(--dinner-accent);
+    text-decoration-color: color-mix(in srgb, var(--dinner-accent) 45%, transparent);
   }
   .dinner-intro .pricing-badge {
     display: inline-block;
-    background: #f5efe0;
-    border: 1px solid #d4b86a;
+    background: var(--dinner-panel-strong);
+    border: 1px solid var(--dinner-border);
     border-radius: 20px;
     padding: 0.35rem 1.1rem;
     font-size: 0.9rem;
-    color: #6b4f0e;
+    color: var(--dinner-accent-strong);
     font-weight: 600;
     margin-bottom: 0.5rem;
   }
@@ -346,14 +374,14 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
   }
   .dish-extra {
     font-size: 0.78rem;
-    color: #999;
+    color: var(--dinner-muted);
     font-style: italic;
     margin-top: 2px;
   }
   .tag-gfo { background: #fff3e0; color: #e65100; }
   .course-section {
-    background: #fafafa;
-    border: 1px solid #e8e0d4;
+    background: var(--dinner-panel);
+    border: 1px solid var(--dinner-border);
     border-radius: 6px;
     padding: 1.5rem 2rem;
     margin-bottom: 1.5rem;
@@ -363,8 +391,8 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #8b6914;
-    border-bottom: 1px solid #e8e0d4;
+    color: var(--dinner-accent);
+    border-bottom: 1px solid var(--dinner-border);
     padding-bottom: 0.6rem;
     margin-bottom: 1.1rem;
   }
@@ -378,12 +406,12 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
     transition: background 0.15s;
   }
   .dish-option:hover {
-    background: #f0e8d8;
+    background: var(--dinner-hover);
   }
   .dish-option input[type="radio"] {
     margin-top: 3px;
     flex-shrink: 0;
-    accent-color: #8b6914;
+    accent-color: var(--dinner-accent);
     width: 16px;
     height: 16px;
   }
@@ -394,17 +422,17 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
   }
   .dish-name {
     font-weight: 500;
-    color: #1a1a1a;
+    color: var(--dinner-text);
     font-size: 0.95rem;
   }
   .dish-desc {
     font-size: 0.82rem;
-    color: #777;
+    color: var(--dinner-muted);
     margin-top: 1px;
   }
   .dish-price {
     font-size: 0.85rem;
-    color: #8b6914;
+    color: var(--dinner-accent);
     font-weight: 500;
     white-space: nowrap;
     margin-top: 2px;
@@ -431,25 +459,38 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
     display: block;
     font-weight: 600;
     margin-bottom: 0.4rem;
-    color: #2c2c2c;
+    color: var(--dinner-text);
   }
   .guest-field input,
   .guest-field textarea {
     width: 100%;
     max-width: 420px;
     padding: 0.5rem 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--dinner-border);
     border-radius: 4px;
     font-size: 0.95rem;
     font-family: inherit;
     box-sizing: border-box;
+    background: var(--dinner-input-bg);
+    color: var(--dinner-text);
+  }
+  .guest-field input::placeholder,
+  .guest-field textarea::placeholder {
+    color: var(--dinner-muted);
+  }
+  .guest-field input:focus,
+  .guest-field textarea:focus,
+  .main-menu-grid select:focus {
+    outline: none;
+    border-color: var(--dinner-accent);
+    box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--dinner-accent) 20%, transparent);
   }
   .guest-field textarea {
     max-width: 100%;
     resize: vertical;
   }
   .submit-btn {
-    background: #8b6914;
+    background: var(--dinner-accent);
     color: #fff;
     border: none;
     padding: 0.65rem 2.2rem;
@@ -461,24 +502,28 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
     transition: background 0.2s;
   }
   .submit-btn:hover {
-    background: #6b4f0e;
+    background: var(--dinner-accent-strong);
   }
   .formspree-note {
     font-size: 0.8rem;
-    color: #999;
+    color: var(--dinner-muted);
     margin-top: 1rem;
   }
   .required-note {
     font-size: 0.8rem;
-    color: #999;
+    color: var(--dinner-muted);
     margin-bottom: 1rem;
   }
+  .required-mark {
+    color: var(--dinner-warning);
+  }
   .order-mode-box {
-    background: #f8f5ec;
-    border: 1px solid #e3d9c2;
+    background: var(--dinner-panel-strong);
+    border: 1px solid var(--dinner-border);
     border-radius: 6px;
     padding: 1rem 1.2rem;
     margin-bottom: 1.2rem;
+    color: var(--dinner-text);
   }
   .order-mode-box label {
     display: block;
@@ -501,36 +546,74 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
     font-weight: 600;
     margin-bottom: 0.5rem;
     font-size: 0.95rem;
+    color: var(--dinner-text);
   }
   .main-menu-grid select {
     width: 100%;
     padding: 0.55rem 0.7rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--dinner-border);
     border-radius: 4px;
     font-size: 0.9rem;
-    background: #fff;
+    background: var(--dinner-input-bg);
+    color: var(--dinner-text);
     font-family: inherit;
   }
   .main-menu-total {
     margin-top: 0.8rem;
     padding: 0.6rem 0.8rem;
-    border: 1px solid #d4b86a;
+    border: 1px solid var(--dinner-border);
     border-radius: 4px;
-    background: #fff8e8;
-    color: #6b4f0e;
+    background: var(--dinner-panel-strong);
+    color: var(--dinner-accent-strong);
     font-weight: 600;
   }
   .main-menu-warning {
-    color: #b00020;
+    color: var(--dinner-warning);
     font-size: 0.84rem;
     margin-top: 0.4rem;
     display: none;
   }
   .set-menu-warning {
-    color: #b00020;
+    color: var(--dinner-warning);
     font-size: 0.84rem;
     margin-top: 0.4rem;
     display: none;
+  }
+  .steak-upgrade-box {
+    display: none;
+    margin: 0.25rem 0 0.5rem 2.5rem;
+    padding: 0.6rem 0.8rem;
+    background: var(--dinner-panel-strong);
+    border: 1px solid var(--dinner-border);
+    border-radius: 4px;
+    font-size: 0.88rem;
+    color: var(--dinner-text);
+  }
+  .steak-upgrade-choice {
+    display: block;
+    cursor: pointer;
+  }
+  .steak-upgrade-choice + .steak-upgrade-choice {
+    margin-top: 0.3rem;
+  }
+  .steak-upgrade-choice:first-of-type {
+    margin-top: 0.4rem;
+  }
+  body.quarto-dark .tag-gfo {
+    background: #4d3a22;
+    color: #ffcb84;
+  }
+  body.quarto-dark .tag-v {
+    background: #1f4934;
+    color: #9fe0aa;
+  }
+  body.quarto-dark .tag-vg {
+    background: #184842;
+    color: #8dd9ca;
+  }
+  body.quarto-dark .tag-gf {
+    background: #4d4320;
+    color: #ffd978;
   }
 </style>
 
@@ -542,22 +625,22 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
 
 <form id="dinner-order-form" action="https://formspree.io/f/mnjyvrpp" method="POST">
 
-  <p class="required-note">Fields marked <span style="color:#c0392b">*</span> are required.</p>
+  <p class="required-note">Fields marked <span class="required-mark">*</span> are required.</p>
 
   <!-- Guest details -->
   <div class="guest-field">
-    <label for="guest-name">Your Name <span style="color:#c0392b">*</span></label>
+    <label for="guest-name">Your Name <span class="required-mark">*</span></label>
     <input type="text" id="guest-name" name="01_guest_name" required="" placeholder="e.g. Jane Smith">
   </div>
 
   <div class="guest-field">
-    <label for="guest-email">Email Address <span style="color:#c0392b">*</span></label>
+    <label for="guest-email">Email Address <span class="required-mark">*</span></label>
     <input type="email" id="guest-email" name="02_guest_email" required="" placeholder="for order confirmation">
     <input type="hidden" id="formspree-replyto" name="_replyto">
   </div>
 
   <div class="order-mode-box">
-    <strong>Order Type <span style="color:#c0392b">*</span></strong>
+    <strong>Order Type <span class="required-mark">*</span></strong>
     <label>
       <input type="radio" name="03_order_type" value="Set Menu" checked="">
       Set Menu (3 courses, or 2 courses with or without steak upgrade)
@@ -660,12 +743,12 @@ gtag('config', 'G-CRVC0BS9GY', { 'anonymize_ip': true});
         <span class="dish-tags"><span class="tag tag-gf">GF</span></span>
       </span>
     </label>
-    <div id="steak-upgrade-box" style="display:none; margin: 0.25rem 0 0.5rem 2.5rem; padding: 0.6rem 0.8rem; background:#fff8e8; border:1px solid #d4b86a; border-radius:4px; font-size:0.88rem;">
+    <div id="steak-upgrade-box" class="steak-upgrade-box">
       <strong>Upgrade your cut?</strong>
-      <label style="display:block; margin-top:0.4rem; cursor:pointer;">
+      <label class="steak-upgrade-choice">
         <input type="radio" name="06_steak_upgrade" value="No upgrade – standard Steak Frites" checked=""> Standard Steak Frites (included)
       </label>
-      <label style="display:block; margin-top:0.3rem; cursor:pointer;">
+      <label class="steak-upgrade-choice">
         <input type="radio" name="06_steak_upgrade" value="Upgrade to 8oz sirloin +£8"> Upgrade to 8oz sirloin <strong>+£8</strong>
       </label>
     </div>
