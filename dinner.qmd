@@ -243,6 +243,7 @@ format:
   <div class="guest-field">
     <label for="guest-email">Email Address <span style="color:#c0392b">*</span></label>
     <input type="email" id="guest-email" name="02_guest_email" required placeholder="for order confirmation">
+    <input type="hidden" id="formspree-replyto" name="_replyto">
   </div>
 
   <div class="order-mode-box">
@@ -655,7 +656,17 @@ format:
     el.addEventListener('change', updateMainMenuTotal);
   });
 
+  var guestEmailField = document.getElementById('guest-email');
+  var formspreeReplyToField = document.getElementById('formspree-replyto');
+  function syncReplyToEmail() {
+    formspreeReplyToField.value = guestEmailField.value.trim();
+  }
+
+  guestEmailField.addEventListener('input', syncReplyToEmail);
+  guestEmailField.addEventListener('change', syncReplyToEmail);
+
   document.getElementById('dinner-order-form').addEventListener('submit', function(e) {
+    syncReplyToEmail();
     var mode = document.querySelector('input[name="03_order_type"]:checked').value;
     if (mode === 'Not attending dinner') {
       return;
