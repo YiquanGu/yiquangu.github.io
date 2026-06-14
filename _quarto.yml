@@ -31,8 +31,8 @@ website:
       - publications.qmd
       - projects.qmd
       - cv.qmd
-      - text: "Workshop"        
-        href: workshop.qmd
+      # - text: "Workshop"        
+      #   href: workshop.qmd
 
 
 
